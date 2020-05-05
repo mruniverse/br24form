@@ -17,4 +17,9 @@
     <link href="../css/app.css" rel="stylesheet">
 </head>
 <body class="bcolor">
-<div id="app">
+    <div class="top-right links">
+        <a href="Views/home.blade.php">Home</a>
+        <a href="Views/auth/login.blade.php">Login</a>
+        <a href="Views/auth/register.php">Register</a>
+    </div>
+    <div id="app">
