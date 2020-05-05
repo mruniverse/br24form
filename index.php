@@ -80,7 +80,7 @@
 
 <?php
 require_once "crest/src/crest.php";
-
+CRest::installApp();
 $result = CRest::call('user.current');
 print_r($result);
 ?>
