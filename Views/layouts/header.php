@@ -23,10 +23,10 @@
             <li class="nav-item active">
                 <a class="nav-link" href="/Views/auth/home.php">Home <span class="sr-only">(página atual)</span></a>
             </li>
-            <li class="nav-item active">
+            <li class="nav-item">
                 <a class="nav-link" href="/Views/auth/login.php"><span class="sr-only">Login</span></a>
             </li>
-            <li class="nav-item active">
+            <li class="nav-item">
                 <a class="nav-link" href="/Views/auth/register.php"><span class="sr-only">Register</span></a>
             </li>
         </ul>
