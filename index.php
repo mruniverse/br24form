@@ -1,8 +1,9 @@
 <?php
+define('ROOT_DIR', __DIR__);
+
 require_once "crest/src/crest.php";
 require_once "Views/layouts/header.php";
 
-define('ROOT_DIR', __DIR__);
 
 CRest::installApp(true);
 $result = CRest::call('user.current');
