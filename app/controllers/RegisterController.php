@@ -8,7 +8,7 @@ use App\View;
 
 class RegisterController{
     public function index(){
-        
+
     }
 
 
