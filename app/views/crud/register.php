@@ -8,7 +8,7 @@
                 <div class="tab-content" id="myTabContent">
                     <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
                         <h3 class="register-heading">Apply as a Employee</h3>
-                        <form method="POST" class="row register-form" action="/app/controllers/RegisterController.php">
+                        <form method="POST" class="row register-form" action="../../controllers/Register.php">
                             <div class="col-md-6">
                                 <div class="form-group">
                                     <input type="text" name="name" class="form-control" placeholder="Your Name" required/>
@@ -34,6 +34,7 @@
                                     <input type="text" name="cpf" class="form-control" id="CPF" placeholder="CPF" required>
                                     <script>$("#CPF").mask("999.999.999-99");</script>
                                 </div>
+                                <input type="hidden" name="operation" value="store">
                                 <input type="submit" class="btnRegister" value="Register"/>
                             </div>
                         </form>

@@ -1,16 +1,51 @@
 <?php
-require_once "crest/src/crest.php";
-require_once "app/views/includes/header.php";
+require 'vendor/autoload.php';
+require 'init.php';
+$app = new \Slim\App(['settings' => ['displayErrorDetails' => true]]);
 
-CRest::installApp(true);
-$result = CRest::call('user.current');
-$name = array_column($result, 'NAME');
-?>
-    <div class="flex-center position-ref full-height">
-        <div class="content">
-            <div class="title-guide">
-                Bem-vindo <?= $name[0] ?>!
-            </div>
-        </div>
-    </div>
-<?php require_once "app/views/includes/header.php" ?>
+$app->get('/', function () {
+    $Home = new \App\Controllers\HomeController();
+    $Home->index();
+});
+
+
+// adição de usuário
+// exibe o formulário de cadastro
+$app->get('/add', function () {
+    $UsersController = new \App\Controllers\UsersController;
+    $UsersController->create();
+});
+
+// processa o formulário de cadastro
+$app->post('/add', function () {
+    $UsersController = new \App\Controllers\UsersController;
+    $UsersController->store();
+});
+
+
+// edição de usuário
+// exibe o formulário de edição
+$app->get('/edit/{id}', function ($request) {
+    // pega o ID da URL
+    $id = $request->getAttribute('id');
+
+    $UsersController = new \App\Controllers\UsersController;
+    $UsersController->edit($id);
+});
+
+// processa o formulário de edição
+$app->post('/edit', function () {
+    $UsersController = new \App\Controllers\UsersController;
+    $UsersController->update();
+});
+
+// remove um usuário
+$app->get('/remove/{id}', function ($request) {
+    // pega o ID da URL
+    $id = $request->getAttribute('id');
+
+    $UsersController = new \App\Controllers\UsersController;
+    $UsersController->remove($id);
+});
+
+$app->run();
