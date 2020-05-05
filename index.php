@@ -11,7 +11,7 @@ $name = array_column($result, 'NAME');
 
 <div class="flex-center position-ref full-height">
     <div class="content">
-        <div class="guide-font">
+        <div class="title-guide">
             Bem-vindo <?=$name[0]?>!
         </div>
     </div>
