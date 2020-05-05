@@ -7,6 +7,7 @@ use App\Company;
 
 class RegisterController{
     public function index(){
+        \App\View::make('register');
     }
 
 
