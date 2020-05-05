@@ -16,6 +16,7 @@
         CRest::installApp(true);
         $result = CRest::call('user.current');
         $name = array_column($result, 'NAME');
+        $_SESSION['name'] = $name[0];
 
         $app = new App();
     ?>
