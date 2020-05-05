@@ -1,4 +1,3 @@
-<?php require_once $_SERVER['DOCUMENT_ROOT'] . '/views/includes/header.php' ?>
     <div class="container register">
         <div class="row">
             <div class="col-md-3 register-left">
@@ -42,4 +41,3 @@
             </div>
         </div>
     </div>
-<?php require_once($_SERVER['DOCUMENT_ROOT'] . "/views/includes/footer.php") ?>
