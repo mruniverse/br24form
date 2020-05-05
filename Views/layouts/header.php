@@ -23,12 +23,12 @@
     <div class="collapse navbar-collapse" id="conteudoNavbarSuportado">
         <ul class="navbar-nav mr-auto">
             <li class="nav-item active">
-                <a class="nav-link" href="/Views/auth/home.php">Home <span class="sr-only">(página atual)</span></a>
+                <a class="nav-link" href="/Views/auth/home.php">Home<span class="sr-only"></span></a>
             </li>
-            <li class="nav-item">
+            <li class="nav-item active">
                 <a class="nav-link" href="/Views/auth/login.php">Login</a>
             </li>
-            <li class="nav-item">
+            <li class="nav-item active">
                 <a class="nav-link" href="/Views/auth/register.php">Register</a>
             </li>
         </ul>
