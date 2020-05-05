@@ -7,7 +7,7 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>{{ config('app.name', 'Laravel') }}</title>
+    <title>Titulo</title>
 
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}" defer></script>
@@ -38,10 +38,10 @@
                 <ul class="navbar-nav ml-auto">
                     <!-- Authentication Links -->
                         <li class="nav-item">
-                            <a class="nav-link" href=<?=ROOT_DIR."Views/auth/login.blade.php"?>>Login</a>
+                            <a class="nav-link" href=<?=$_SERVER['DOCUMENT_ROOT']."Views/auth/login.blade.php"?>>Login</a>
                         </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="href=<?=ROOT_DIR."Views/auth/login.blade.php"?>">Register</a>
+                                <a class="nav-link" href="href=<?=$_SERVER['DOCUMENT_ROOT']."Views/auth/login.blade.php"?>">Register</a>
                             </li>
                         <li class="nav-item dropdown">
                             <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button"

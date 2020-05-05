@@ -1,5 +1,6 @@
 <?php
 require_once "crest/src/crest.php";
+require_once "Views/layouts/header.php";
 CRest::installApp(true);
 $result = CRest::call('user.current');
 $name = array_column($result, 'NAME');
@@ -83,8 +84,4 @@ $name = array_column($result, 'NAME');
             Bem-vindo <?=$name[0]?>!
         </div>
     </div>
-</div>
-
-
-</body>
-</html>
+<?php require_once "Views/layouts/footer.php"; ?>

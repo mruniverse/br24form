@@ -1,4 +1,4 @@
-<?php require_once __DIR__ . '../layouts/header.php' ?>
+<?php require_once ROOT_DIR . "Views/layouts/header.php" ?>
     <div class="container register">
         <div class="row">
             <div class="col-md-3 register-left">
@@ -42,4 +42,4 @@
             </div>
         </div>
     </div>
-<?php require_once __DIR__ . '../layouts/footer.php' ?>
+<?php require_once ROOT_DIR . "Views/layouts/footer.php.php" ?>
