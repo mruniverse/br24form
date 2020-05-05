@@ -1,14 +1,12 @@
 <?php
 
-namespace App\Http\Controllers;
-
+use app\core\Controller;
 use App\Contact;
 use App\Company;
 
-class RegisterController{
-
+class RegisterController extends Controller{
     public function index(){
-        //
+        $this->view('crud/register');
     }
 
 
