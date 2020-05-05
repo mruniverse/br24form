@@ -21,22 +21,16 @@
     </button>
 
     <div class="collapse navbar-collapse" id="conteudoNavbarSuportado">
-        <ul class="nav nav-tabs">
-            <li class="active"><a data-toggle="tab" href="#home">Home</a></li>
-            <li><a data-toggle="tab" href="/Views/auth/register.php#menu1">Menu 1</a></li>
-            <li><a data-toggle="tab" href="#menu2">Menu 2</a></li>
-            <li><a data-toggle="tab" href="/Views/auth/register.php#menu3">Register</a></li>
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+                <a class="nav-link" href="/Views/auth/home.php">Home <span class="sr-only">(página atual)</span></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/Views/auth/login.php">Login</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/Views/auth/register.php">Register</a>
+            </li>
         </ul>
-        <!--        <ul class="navbar-nav mr-auto">-->
-<!--            <li class="nav-item active">-->
-<!--                <a class="nav-link" href="/Views/auth/home.php">Home <span class="sr-only">(página atual)</span></a>-->
-<!--            </li>-->
-<!--            <li class="nav-item">-->
-<!--                <a class="nav-link" href="/Views/auth/login.php"><span class="sr-only">Login</span></a>-->
-<!--            </li>-->
-<!--            <li class="nav-item">-->
-<!--                <a class="nav-link" href="/Views/auth/register.php"><span class="sr-only">Register</span></a>-->
-<!--            </li>-->
-<!--        </ul>-->
     </div>
 </nav>
