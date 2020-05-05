@@ -6,6 +6,7 @@ use App\Company;
 
 class Register extends Controller{
     public function index(){
+
         $this->view('crud/register');
     }
 

@@ -2,7 +2,7 @@
 
 namespace app\core;
 
-use app\models\Users;
+use app\models\Company;
 
 /**
  * Esta classe é responsável por instanciar um model e chamar a view correta
