@@ -18,12 +18,12 @@
         $name = array_column($result, 'NAME');
         $_SESSION['name'] = $name[0];
 
-        function parseUrl(){
+        public function parseUrl(){
             $REQUEST_URI = explode('/', substr(filter_input(INPUT_SERVER, 'REQUEST_URI'), 1));
             return $REQUEST_URI;
         }
 
-        echo $url = parse_url();
+        echo $url = parseUrl();
 
 
 //        $app = new App();
