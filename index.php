@@ -1,6 +1,6 @@
 <?php
-//require 'vendor/autoload.php';
-//require 'init.php';
+require 'vendor/autoload.php';
+require 'init.php';
 
 use Psr\Http\Message\ResponseInterface as Response;
 use Psr\Http\Message\ServerRequestInterface as Request;
