@@ -6,8 +6,8 @@
 	 *  define:
 	 *      C_REST_WEB_HOOK_URL = 'https://rest-api.bitrix24.com/rest/1/doutwqkjxgc3mgc1/'  //url on creat Webhook
 	 *      or
-	 *      C_REST_CLIENT_ID = 'local.5c8bb1b0891cf2.87252039' //Application ID
-	 *      C_REST_CLIENT_SECRET = 'SakeVG5mbRdcQet45UUrt6q72AMTo7fkwXSO7Y5LYFYNCRsA6f'//Application key
+	 *      C_REST_CLIENT_ID = 'local.5c8bb1b0891cf2.87252039' //app ID
+	 *      C_REST_CLIENT_SECRET = 'SakeVG5mbRdcQet45UUrt6q72AMTo7fkwXSO7Y5LYFYNCRsA6f'//app key
 	 *
 	 *		C_REST_CURRENT_ENCODING = 'windows-1251'//set current encoding site if encoding unequal UTF-8 to use iconv()
 	 *      C_REST_BLOCK_LOG = true //turn off default logs
@@ -185,7 +185,7 @@
 			}
 			return [
 				'error'             => 'no_install_app',
-				'error_information' => 'error install Application, pls install local application '
+				'error_information' => 'error install app, pls install local application '
 			];
 		}
 
@@ -322,7 +322,7 @@
 
 		/**
 		 * @var $arSettings array settings application
-		 * @var $isInstall  boolean true if install Application by installApp()
+		 * @var $isInstall  boolean true if install app by installApp()
 		 * @return boolean
 		 */
 

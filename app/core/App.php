@@ -6,7 +6,7 @@ namespace app\core;
  * e verificar a existência dos mesmo.
  */
 class App{
-    protected $controller = 'Home';
+    protected $controller = 'HomeController';
     protected $method = 'index';
     protected $page404 = false;
     protected $params = [];
@@ -31,20 +31,20 @@ class App{
 
     /**
      * Este método verifica se o array informado possui dados na psoição 0 (controlador)
-     * caso exista, verifica se existe um arquivo com aquele nome no diretório Application/controllers
+     * caso exista, verifica se existe um arquivo com aquele nome no diretório app/controllers
      * e instancia um objeto contido no arquivo, caso contrário a variável $page404 recebe true.
      *
      * @param  array  $url   Array contendo informações ou não do controlador, método e parâmetros
      */
     private function getControllerFromUrl($url){
         if ( !empty($url[0]) && isset($url[0]) ) {
-            if ( file_exists('../Application/controllers/' . ucfirst($url[0])  . '.php') ) {
+            if ( file_exists('../app/controllers/' . ucfirst($url[0])  . '.php') ) {
                 $this->controller = ucfirst($url[0]);
             } else {
                 $this->page404 = true;
             }
         }
-        require '../Application/controllers/' . $this->controller . '.php';
+        require '../app/controllers/' . $this->controller . '.php';
         $this->controller = new $this->controller();
     }
 

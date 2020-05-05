@@ -1,4 +1,4 @@
-@extends('includes.Application')
+@extends('includes.app')
 
 @section('content')
     <div class="container">
