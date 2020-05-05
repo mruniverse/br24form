@@ -17,7 +17,7 @@ $app->map(['GET','POST'],'/', function () {
 
 // adição de usuário
 // exibe o formulário de cadastro
-$app->get('/add', function ($request, $response, $args) {
+$app->get('/register/', function ($request, $response, $args) {
     $Register = new \App\controllers\RegisterController();
     $Register->create();
 });
