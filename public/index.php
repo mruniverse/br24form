@@ -18,7 +18,15 @@
         $name = array_column($result, 'NAME');
         $_SESSION['name'] = $name[0];
 
-        $app = new App();
+        function parseUrl(){
+            $REQUEST_URI = explode('/', substr(filter_input(INPUT_SERVER, 'REQUEST_URI'), 1));
+            return $REQUEST_URI;
+        }
+
+        echo $url = parse_url();
+
+
+//        $app = new App();
     ?>
     <!--<script src="/assets/js/jquery.slim.min.js"></script>-->
     <!--<script src="/assets/js/bootstrap.min.js"></script>-->
