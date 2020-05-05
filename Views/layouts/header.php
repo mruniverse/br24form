@@ -13,7 +13,7 @@
         <div class="bx-tabs-wrap">
             <span class="bx-tab" href="Views/home.blade.php">Home</span>
             <span class="bx-tab bx-tab-active" href="Views/auth/login.blade.php">Login</span>
-            <span class="bx-tab"><a href="/Views/auth/register.php">Register</a></span>
+            <a href="/Views/auth/register.php"><span class="bx-tab">Register</span></a>
             <div class="bx-tabs-line"></div>
         </div>
         <div id="app">
