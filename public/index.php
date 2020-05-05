@@ -6,17 +6,20 @@
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
+    <?php
+        require_once '../app/autoload.php';
+        require_once 'crest/src/crest.php';
 
-<?php
-require '../app/autoload.php';
+        use app\core\App;
+        use app\core\Controller;
 
-use app\core\App;
-use app\core\Controller;
+        CRest::installApp(true);
+        $result = CRest::call('user.current');
+        $name = array_column($result, 'NAME');
 
-$app = new App();
-
-?>
-<!--<script src="/assets/js/jquery.slim.min.js"></script>-->
-<!--<script src="/assets/js/bootstrap.min.js"></script>-->
+        $app = new App();
+    ?>
+    <!--<script src="/assets/js/jquery.slim.min.js"></script>-->
+    <!--<script src="/assets/js/bootstrap.min.js"></script>-->
 </body>
 </html>
