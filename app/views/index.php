@@ -1,19 +1,7 @@
-<?php
-define("ROOT_DIR", __DIR__);
-
-require_once "crest/src/crest.php";
-require_once "views/includes/header.php";
-
-CRest::installApp(true);
-$result = CRest::call('user.current');
-$name = array_column($result, 'NAME');
-?>
-
-    <div class="flex-center position-ref full-height">
-        <div class="content">
-            <div class="title-guide">
-                Bem-vindo <?=$name[0]?>!
-            </div>
+<div class="container">
+    <div class="row">
+        <div class="col-8 offset-2 text-center" style="margin-top:150px">
+            <h1>Construindo um simples Framework MVC com PHP</h1>
         </div>
     </div>
-<?php require_once "views/includes/footer.php"; ?>
+</div>
