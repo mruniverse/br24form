@@ -1,25 +1,19 @@
 <!doctype html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Titulo</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+    <meta http-equiv="Content-Language" content="en-us">
+    <link rel="stylesheet" href="Views/css/style.css"/>
+    <link rel="stylesheet" href="Views/css/bitrix24-guide-style.css"/>
+    <meta name="GENERATOR" content="Microsoft FrontPage 4.0">
+    <meta name="ProgId" content="FrontPage.Editor.Document">
+    <title>Br24 Form</title>
 
-    <!-- Scripts -->
-    <script src="../js/app.js" defer></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-    <script type="text/javascript"
-            src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.0/jquery.mask.js"></script>
-    <!-- Fonts -->
-    <link rel="dns-prefetch" href="//fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
-    <!-- Styles -->
-    <link href="../css/app.css" rel="stylesheet">
-</head>
-<body class="bcolor">
-    <div class="top-right links">
-        <a href="Views/home.blade.php">Home</a>
-        <a href="Views/auth/login.blade.php">Login</a>
-        <a href="Views/auth/register.php">Register</a>
-    </div>
-    <div id="app">
+    <body class="bcolor">
+        <div class="bx-tabs-wrap">
+            <span class="bx-tab" href="Views/home.blade.php">Home</span>
+            <span class="bx-tab bx-tab-active" href="Views/auth/login.blade.php">Login</span>
+            <span class="bx-tab" href="Views/auth/register.php">Register</span>
+            <div class="bx-tabs-line"></div>
+        </div>
+        <div id="app">
