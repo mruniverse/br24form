@@ -16,4 +16,3 @@
             <a href="/Views/auth/register.php"><span class="bx-tab">Register</span></a>
             <div class="bx-tabs-line"></div>
         </div>
-        <div id="app">

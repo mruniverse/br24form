@@ -16,4 +16,5 @@ $name = array_column($result, 'NAME');
             Bem-vindo <?=$name[0]?>!
         </div>
     </div>
+</div>
 <?php require_once "Views/layouts/footer.php"; ?>
