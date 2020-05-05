@@ -1,7 +1,6 @@
 <?php
 
 namespace App;
-require_once(ROOT_DIR . 'crest/src/crest.php');
 class Contact{
     private $name, $email, $phone, $cpf;
 
@@ -11,7 +10,6 @@ class Contact{
         $this->setPhone($phone);
         $this->setCpf($cpf);
     }
-
     public function addContact(){
         $result = \CRest::call('crm.contact.add',
             [

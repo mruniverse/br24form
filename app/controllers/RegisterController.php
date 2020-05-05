@@ -4,15 +4,16 @@ namespace App\controllers;
 
 use App\Contact;
 use App\Company;
+use App\View;
 
 class RegisterController{
     public function index(){
-        \App\View::make('register');
-    }
+=    }
 
 
     public function create(){
-        \App\View::make('register');
+        echo "ok";
+        View::make('register');
     }
 
     public function store($request){
