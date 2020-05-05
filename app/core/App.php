@@ -17,6 +17,8 @@ class App{
         $this->getMethodFromUrl($URL_ARRAY);
         $this->getParamsFromUrl($URL_ARRAY);
 
+        echo $this->controller;
+        echo $this->method;
         call_user_func_array([$this->controller, $this->method], $this->params);
     }
     /**
@@ -38,13 +40,13 @@ class App{
      */
     private function getControllerFromUrl($url){
         if ( !empty($url[0]) && isset($url[0]) ) {
-            if ( file_exists('/app/controllers/' . ucfirst($url[0])  . '.php') ) {
+            if ( file_exists('../app/controllers/' . ucfirst($url[0])  . '.php') ) {
                 $this->controller = ucfirst($url[0]);
             } else {
                 $this->page404 = true;
             }
         }
-        require '/app/controllers/' . $this->controller . '.php';
+        require '../app/controllers/' . $this->controller . '.php';
         $this->controller = new $this->controller();
     }
 
