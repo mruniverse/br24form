@@ -80,7 +80,7 @@ $name = array_column($result, 'NAME');
 
     <div class="content">
         <div class="title m-b-md">
-            Bem-vindo <?=$name?>!
+            Bem-vindo <?=$name[0]?>!
         </div>
     </div>
 </div>
