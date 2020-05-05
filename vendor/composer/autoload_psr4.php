@@ -12,4 +12,5 @@ return array(
     'Psr\\Http\\Message\\' => array($vendorDir . '/psr/http-factory/src', $vendorDir . '/psr/http-message/src'),
     'Psr\\Container\\' => array($vendorDir . '/psr/container/src'),
     'FastRoute\\' => array($vendorDir . '/nikic/fast-route/src'),
+    'App\\' => array($baseDir . '/app'),
 );
