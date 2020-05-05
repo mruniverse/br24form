@@ -3,15 +3,14 @@
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
     <meta http-equiv="Content-Language" content="en-us">
-    <link rel="stylesheet" href="/app/viewsiews/css/app.css"/>
-    <link rel="stylesheet" href="/app/viewsiews/css/style.css"/>
-    <link rel="stylesheet" href="/app/viewsiews/css/bitrix24-guide-style.css"/>
+    <link rel="stylesheet" href="/app/views/css/style.css"/>
+    <link rel="stylesheet" href="/app/views/css/app.css"/>
+    <link rel="stylesheet" href="/app/views/css/bitrix24-guide-style.css"/>
     <meta name="GENERATOR" content="Microsoft FrontPage 4.0">
     <meta name="ProgId" content="FrontPage.Editor.Document">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
     <title>Br24 Form</title>
-
 <body>
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <a class="navbar-brand" href="/">Navbar</a>
@@ -26,7 +25,7 @@
                 <a class="nav-link" href="/">Home<span class="sr-only"></span></a>
             </li>
             <li class="nav-item active">
-                <a class="nav-link" href="/app/viewsiews/auth/register.php">Register</a>
+                <a class="nav-link" href="/app/views/crud/register.php">Register</a>
             </li>
         </ul>
     </div>
