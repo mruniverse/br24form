@@ -5,7 +5,7 @@ require 'init.php';
 $app = new \Slim\App(['settings' => ['displayErrorDetails' => true]]);
 
 $app->get('/', function () {
-    $Home = new \App\Controllers\HomeController();
+    $Home = new \App\controllers\HomeController();
     $Home->index();
 });
 
@@ -13,13 +13,13 @@ $app->get('/', function () {
 // adição de usuário
 // exibe o formulário de cadastro
 $app->get('/add', function () {
-    $Register = new \App\Controllers\RegisterController();
+    $Register = new \App\controllers\RegisterController();
     $Register->create();
 });
 
 // processa o formulário de cadastro
 $app->post('/add', function () {
-    $Register = new \App\Controllers\RegisterController();
+    $Register = new \App\controllers\RegisterController();
     $Register->store();
 });
 
