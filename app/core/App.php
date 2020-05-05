@@ -6,16 +6,16 @@ namespace app\core;
  * e verificar a existência dos mesmo.
  */
 class App{
-    protected $controller = 'Register';
+    protected $controller = 'Home';
     protected $method = 'index';
     protected $page404 = false;
     protected $params = [];
 
     public function __construct(){
         $URL_ARRAY = $this->parseUrl();
-        $this->getControllerFromUrl($URL_ARRAY);
-        $this->getMethodFromUrl($URL_ARRAY);
-        $this->getParamsFromUrl($URL_ARRAY);
+        $this->controller = getControllerFromUrl($URL_ARRAY);
+        $this->method = getMethodFromUrl($URL_ARRAY);
+        $this->params = getParamsFromUrl($URL_ARRAY);
 
         call_user_func_array([$this->controller, $this->method], $this->params);
     }
