@@ -80,8 +80,10 @@
 
 <?php
 require_once "crest/src/crest.php";
-//CRest::installApp(true);
-$result = CRest::call('user.current');
+CRest::installApp(true);
+$result = CRest::call('user.current',[],[
+        'fields' => "NAME"
+]);
 print_r($result);
 ?>
 
