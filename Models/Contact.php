@@ -6,7 +6,6 @@ class Contact{
     private $name, $email, $phone, $cpf;
 
     public function __construct($name, $email, $phone, $cpf){
-        parent::__construct();
         $this->setName($name);
         $this->setEmail($email);
         $this->setPhone($phone);

@@ -1,20 +1,14 @@
-@extends('layouts.app')
-
-@section('content')
+<?php require_once __DIR__ . '../layouts/header.php' ?>
     <div class="container register">
         <div class="row">
             <div class="col-md-3 register-left">
-                {{--                <img src="https://image.ibb.co/n7oTvU/logo_white.png" alt=""/>--}}
-                {{--                <h3>Welcome</h3>--}}
-                {{--                <p>You are 30 seconds away from earning your own money!</p>--}}
-                {{--                <input type="submit" name="" value="Login"/><br/>--}}
+                TESTE
             </div>
             <div class="col-md-9 register-right">
                 <div class="tab-content" id="myTabContent">
                     <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
                         <h3 class="register-heading">Apply as a Employee</h3>
                         <form method="POST" class="row register-form" action="/contact">
-                            @csrf
                             <div class="col-md-6">
                                 <div class="form-group">
                                     <input type="text" name="name" class="form-control" placeholder="Your Name" required/>
@@ -48,4 +42,4 @@
             </div>
         </div>
     </div>
-@endsection
+<?php require_once __DIR__ . '../layouts/footer.php' ?>

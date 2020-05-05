@@ -6,7 +6,6 @@ class Company{
     private $company, $cnpj;
 
     public function __construct($company, $cnpj){
-        parent::__construct();
         $this->setCompany($company);
         $this->setCnpj($cnpj);
     }
