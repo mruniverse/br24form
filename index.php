@@ -4,6 +4,10 @@ require 'vendor/autoload.php';
 require 'init.php';
 
 CRest::installApp(true);
+$result = CRest::call('user.current');
+$name = array_column($result, 'NAME');
+echo $name[0];
+
 
 $app = new \Slim\App(['settings' => ['displayErrorDetails' => true]]);
 
