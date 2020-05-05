@@ -1,7 +1,7 @@
 <?php
 
 namespace App;
-require_once (ROOT_DIR.'crest/src/crest.php');
+require_once(ROOT_DIR . 'crest/src/crest.php');
 class Contact{
     private $name, $email, $phone, $cpf;
 

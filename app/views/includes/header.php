@@ -3,9 +3,9 @@
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
     <meta http-equiv="Content-Language" content="en-us">
-    <link rel="stylesheet" href="/Views/css/app.css"/>
-    <link rel="stylesheet" href="/Views/css/style.css"/>
-    <link rel="stylesheet" href="/Views/css/bitrix24-guide-style.css"/>
+    <link rel="stylesheet" href="/Application/viewsiews/css/app.css"/>
+    <link rel="stylesheet" href="/Application/viewsiews/css/style.css"/>
+    <link rel="stylesheet" href="/Application/viewsiews/css/bitrix24-guide-style.css"/>
     <meta name="GENERATOR" content="Microsoft FrontPage 4.0">
     <meta name="ProgId" content="FrontPage.Editor.Document">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
@@ -26,7 +26,7 @@
                 <a class="nav-link" href="/">Home<span class="sr-only"></span></a>
             </li>
             <li class="nav-item active">
-                <a class="nav-link" href="/Views/auth/register.php">Register</a>
+                <a class="nav-link" href="/Application/viewsiews/auth/register.php">Register</a>
             </li>
         </ul>
     </div>

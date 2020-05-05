@@ -185,7 +185,7 @@
 			}
 			return [
 				'error'             => 'no_install_app',
-				'error_information' => 'error install app, pls install local application '
+				'error_information' => 'error install Application, pls install local application '
 			];
 		}
 
@@ -322,7 +322,7 @@
 
 		/**
 		 * @var $arSettings array settings application
-		 * @var $isInstall  boolean true if install app by installApp()
+		 * @var $isInstall  boolean true if install Application by installApp()
 		 * @return boolean
 		 */
 

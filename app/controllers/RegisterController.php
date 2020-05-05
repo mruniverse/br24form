@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use App\Contact;
 use App\Company;
 
-class CompanyContactController{
+class RegisterController{
 
     public function index(){
         //

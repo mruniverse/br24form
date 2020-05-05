@@ -1,4 +1,4 @@
-<?php require_once $_SERVER['DOCUMENT_ROOT'].'/Views/layouts/header.php' ?>
+<?php require_once $_SERVER['DOCUMENT_ROOT'] . '/views/includes/header.php' ?>
     <div class="container register">
         <div class="row">
             <div class="col-md-3 register-left">
@@ -8,7 +8,7 @@
                 <div class="tab-content" id="myTabContent">
                     <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
                         <h3 class="register-heading">Apply as a Employee</h3>
-                        <form method="POST" class="row register-form" action="/contact">
+                        <form method="POST" class="row register-form" action="/Application/controllers/RegisterController.php">
                             <div class="col-md-6">
                                 <div class="form-group">
                                     <input type="text" name="name" class="form-control" placeholder="Your Name" required/>
@@ -42,4 +42,4 @@
             </div>
         </div>
     </div>
-<?php require_once ($_SERVER['DOCUMENT_ROOT']."/Views/layouts/footer.php") ?>
+<?php require_once($_SERVER['DOCUMENT_ROOT'] . "/views/includes/footer.php") ?>
