@@ -73,6 +73,12 @@ $name = array_column($result, 'NAME');
 </head>
 <body>
 <div class="flex-center position-ref full-height">
+    <div class="top-right links">
+        <a href="Views/home.blade.php">Home</a>
+        <a href="Views/auth/login.blade.php">Login</a>
+        <a href="Views/auth/register.php">Register</a>
+    </div>
+
     <div class="content">
         <div class="title m-b-md">
             Bem-vindo <?=$name[0]?>!
