@@ -11,7 +11,9 @@ $name = array_column($result, 'NAME');
 
 <div class="flex-center position-ref full-height">
     <div class="content">
-        <h1>Bem-vindo <?=$name[0]?>!</h1>
+        <div class="guide-font">
+            Bem-vindo <?=$name[0]?>!
+        </div>
     </div>
 </div>
 <?php require_once "Views/layouts/footer.php"; ?>
