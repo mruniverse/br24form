@@ -11,6 +11,7 @@ class RegisterController{
 
 
     public function create(){
+        \App\View::make('crud/register');
     }
 
     public function store($request){

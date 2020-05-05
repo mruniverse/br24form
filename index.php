@@ -12,14 +12,14 @@ $app->get('/', function () {
 // adição de usuário
 // exibe o formulário de cadastro
 $app->get('/add', function () {
-    $UsersController = new \App\Controllers\UsersController;
-    $UsersController->create();
+    $Register = new \App\Controllers\RegisterController();
+    $Register->create();
 });
 
 // processa o formulário de cadastro
 $app->post('/add', function () {
-    $UsersController = new \App\Controllers\UsersController;
-    $UsersController->store();
+    $Register = new \App\Controllers\RegisterController();
+    $Register->store();
 });
 
 

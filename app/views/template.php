@@ -25,7 +25,7 @@
                 <a class="nav-link" href="/">Home<span class="sr-only"></span></a>
             </li>
             <li class="nav-item active">
-                <a class="nav-link" href="/app/views/crud/register.php">Register</a>
+                <a class="nav-link" href="">Register</a>
             </li>
         </ul>
     </div>
