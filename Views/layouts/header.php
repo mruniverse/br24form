@@ -13,7 +13,7 @@
         <div class="bx-tabs-wrap">
             <span class="bx-tab" href="Views/home.blade.php">Home</span>
             <span class="bx-tab bx-tab-active" href="Views/auth/login.blade.php">Login</span>
-            <span class="bx-tab" href="Views/auth/register.php">Register</span>
+            <span class="bx-tab" href="<?=$_SERVER['DOCUMENT_ROOT']?>/Views/auth/register.php">Register</span>
             <div class="bx-tabs-line"></div>
         </div>
         <div id="app">
