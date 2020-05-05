@@ -6,7 +6,7 @@ namespace app\core;
  * e verificar a existência dos mesmo.
  */
 class App{
-    protected $controller = 'Home';
+    protected $controller = 'Register';
     protected $method = 'index';
     protected $page404 = false;
     protected $params = [];
@@ -17,8 +17,6 @@ class App{
         $this->getMethodFromUrl($URL_ARRAY);
         $this->getParamsFromUrl($URL_ARRAY);
 
-        echo $this->controller;
-        echo $this->method;
         call_user_func_array([$this->controller, $this->method], $this->params);
     }
     /**
