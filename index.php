@@ -1,5 +1,5 @@
 <?php
-define('ROOT_DIR', __DIR__);
+define("ROOT_DIR", __DIR__);
 
 require_once "crest/src/crest.php";
 require_once "Views/layouts/header.php";
@@ -14,6 +14,7 @@ $name = array_column($result, 'NAME');
     <div class="content">
         <div class="title-guide">
             Bem-vindo <?=$name[0]?>!
+            <?= ROOT_DIR ?>
         </div>
     </div>
 <?php require_once "Views/layouts/footer.php"; ?>
