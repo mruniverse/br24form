@@ -1,3 +1,10 @@
+<?php
+require_once "crest/src/crest.php";
+CRest::installApp(true);
+$result = CRest::call('user.current');
+$name = array_column($result, 'NAME');
+?>
+
 <!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 <head>
@@ -73,18 +80,11 @@
 
     <div class="content">
         <div class="title m-b-md">
-            Br24 Form
+            Bem-vindo <?=$name?>!
         </div>
     </div>
 </div>
 
-<?php
-require_once "crest/src/crest.php";
-CRest::installApp(true);
-$result = CRest::call('user.current');
-$name = array_column($result, 'NAME');
-print_r($name);
-?>
 
 </body>
 </html>
