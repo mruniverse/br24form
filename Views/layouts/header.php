@@ -9,7 +9,7 @@
     <meta name="ProgId" content="FrontPage.Editor.Document">
     <title>Br24 Form</title>
 
-    <body class="bcolor">
+    <body>
         <div class="bx-tabs-wrap">
             <span class="bx-tab" href="/Views/home.blade.php">Home</span>
             <span class="bx-tab bx-tab-active" href="/Views/auth/login.blade.php">Login</span>
