@@ -6,7 +6,7 @@ namespace app\core;
  * e verificar a existência dos mesmo.
  */
 class App{
-    protected $controller = 'HomeController';
+    protected $controller = 'Home';
     protected $method = 'index';
     protected $page404 = false;
     protected $params = [];
