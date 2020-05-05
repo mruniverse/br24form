@@ -15,7 +15,6 @@ $name = array_column($result, 'NAME');
     <link rel="stylesheet" href="Views/css/bitrix24-guide-style.css"/>
     <meta name="GENERATOR" content="Microsoft FrontPage 4.0">
     <meta name="ProgId" content="FrontPage.Editor.Document">
-
     <title>Br24 Form</title>
 </head>
 <body>
@@ -28,7 +27,7 @@ $name = array_column($result, 'NAME');
     </div>
 
     <div class="content">
-        <div class="title m-b-md">
+        <div class="title-guide">
             Bem-vindo <?=$name[0]?>!
         </div>
     </div>
