@@ -13,9 +13,9 @@ class App{
 
     public function __construct(){
         $URL_ARRAY = $this->parseUrl();
-        $this->controller = getControllerFromUrl($URL_ARRAY);
-        $this->method = getMethodFromUrl($URL_ARRAY);
-        $this->params = getParamsFromUrl($URL_ARRAY);
+        $this->getControllerFromUrl($URL_ARRAY);
+        $this->getMethodFromUrl($URL_ARRAY);
+        $this->getParamsFromUrl($URL_ARRAY);
 
         call_user_func_array([$this->controller, $this->method], $this->params);
     }
