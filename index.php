@@ -2,13 +2,7 @@
 require 'vendor/autoload.php';
 require 'init.php';
 
-use Psr\Http\Message\ResponseInterface as Response;
-use Psr\Http\Message\ServerRequestInterface as Request;
-use Slim\Factory\AppFactory;
-
-$app = AppFactory::create();
-$errorMiddleware = $app->addErrorMiddleware(true, true, true);
-$app->addRoutingMiddleware();
+$app = new \Slim\App(['settings' => ['displayErrorDetails' => true]]);
 
 $app->get('/', function () {
     $Home = new \App\Controllers\HomeController();
