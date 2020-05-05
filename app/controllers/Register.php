@@ -4,7 +4,7 @@ use app\core\Controller;
 use App\Contact;
 use App\Company;
 
-class RegisterController extends Controller{
+class Register extends Controller{
     public function index(){
         $this->view('crud/register');
     }

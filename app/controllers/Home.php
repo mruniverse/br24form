@@ -2,7 +2,7 @@
 
 use app\core\Controller;
 
-class HomeController extends Controller{
+class Home extends Controller{
 
     /*
     * chama a view index.php do  /home   ou somente   /
