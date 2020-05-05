@@ -8,7 +8,6 @@ require 'init.php';
 //$name = array_column($result, 'NAME');
 //echo $name[0];
 
-
 $app = new \Slim\App(['settings' => ['displayErrorDetails' => true]]);
 
 $app->get('/', function () {
