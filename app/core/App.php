@@ -44,7 +44,7 @@ class App{
                 $this->page404 = true;
             }
         }
-        require '../app/controllers/' . $this->controller . '.php';
+        require '/app/controllers/' . $this->controller . '.php';
         $this->controller = new $this->controller();
     }
 
