@@ -4,11 +4,6 @@
             Bem-vindo <?= $request['NAME'] ?>!
         </div>
     </div>
-    <script type="text/javascript">
-        $(document).ready(function () {
-            $('[data-toggle="tooltip"]').tooltip();
-        });
-    </script>
     <div class="wrapper">
         <div class="container-fluid">
             <div class="row">
@@ -18,13 +13,11 @@
                         <a href="create.php" class="btn btn-success pull-right">Add New Employee</a>
                     </div>
                     <?php
-
                     echo "<pre>";
                     foreach ($contacts as $contact) {
                         print_r($contact);
                     }
                     echo "<pre>";
-
                     if (!empty($contacts)) {
                         echo "<table class='table table-bordered table-striped'>";
                         echo "<thead>";
@@ -40,9 +33,9 @@
                         foreach ($contacts as $contact) {
                             echo "<tr>";
                             echo "<td>" . $contact['NAME'] . "</td>";
-                            echo "<td>" . $contact['EMAIL => 0 => VALUE'] . "</td>";
+                            echo "<td>" . $contact['EMAIL'] . "</td>";
                             echo "<td>" . $contact['PHONE'] . "</td>";
-                            echo "<td>" . $contact['CPF'] . "</td>";
+                            echo "<td>" . $contact['UF_CRM_CPF'] . "</td>";
                             echo "<td>";
                             echo "<a href='read.php?id=" . $contact['ID'] . "' title='View Record' data-toggle='tooltip'><span class='glyphicon glyphicon-eye-open'></span></a>";
                             echo "<a href='update.php?id=" . $contact['ID'] . "' title='Update Record' data-toggle='tooltip'><span class='glyphicon glyphicon-pencil'></span></a>";

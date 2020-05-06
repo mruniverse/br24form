@@ -66,8 +66,12 @@ class Contact{
             'select' => [
                 'ID',
                 'NAME',
-                'EMAIL',
-                'PHONE' => '0',
+                'EMAIL' => [
+                    'VALUE'
+                ],
+                'PHONE' => [
+                    'VALUE'
+                ],
                 'UF_CRM_CPF'
             ]
         ]);
