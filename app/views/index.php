@@ -10,7 +10,7 @@
                 <div class="col-md-12">
                     <div class="page-header clearfix">
                         <h2 class="pull-left">Employees Details</h2>
-                        <a href="create.php" class="btn btn-success pull-right">Add New Employee</a>
+                        <a href="/register" class="btn btn-success pull-right">Add New Employee</a>
                     </div>
                     <?php
 //                    echo "<pre>";
@@ -40,9 +40,10 @@
                                         echo "<td>" . $phone . "</td>";
                                         echo "<td>" . $contact['UF_CRM_CPF'] . "</td>";
                                         echo "<td>";
-                                            echo "<a href='read.php?id=" . $contact['ID'] . "' title='View Record' data-toggle='tooltip'><span class='glyphicon glyphicon-eye-open'></span></a>";
-                                            echo "<a href='update.php?id=" . $contact['ID'] . "' title='Update Record' data-toggle='tooltip'><span class='glyphicon glyphicon-pencil'></span></a>";
-                                            echo "<a href='delete.php?id=" . $contact['ID'] . "' title='Delete Record' data-toggle='tooltip'><span class='glyphicon glyphicon-trash'></span></a>";
+                                            echo "<a href='update.php?id=" . $contact['ID'] .
+                                                "' title='Update Record' data-toggle='tooltip'><span class='glyphicon glyphicon-pencil'></span></a>";
+                                            echo "<a href='delete.php?id=" . $contact['ID'] .
+                                                "' title='Delete Record' data-toggle='tooltip'><span class='glyphicon glyphicon-trash'></span></a>";
                                         echo "</td>";
                                     echo "</tr>";
                                 }
