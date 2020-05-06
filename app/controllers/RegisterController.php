@@ -13,7 +13,6 @@ class RegisterController{
 
 
     public function create(){
-        echo "ok";
         View::make('register');
     }
 

@@ -3,13 +3,7 @@ require_once('crest/src/crest.php');
 require 'vendor/autoload.php';
 require 'init.php';
 
-//CRest::installApp(true);
-//$result = CRest::call('user.current');
-//$name = array_column($result, 'NAME');
-//echo $name[0];
-
 $app = new \Slim\App();
-
 
 $app->map(['GET','POST'],'/', function () {
     $Home = new \App\controllers\HomeController();

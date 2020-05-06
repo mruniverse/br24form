@@ -11,7 +11,10 @@ class HomeController{
     * chama a view index.php do  /home   ou somente   /
     */
     public function index(){
-        \App\View::make('index');
+        $result = CRest::call('user.current');
+        $name = array_column($result, 'NAME');
+
+        \App\View::make('index', $name);
     }
 
 }
