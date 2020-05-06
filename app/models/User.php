@@ -1,6 +1,6 @@
 <?php
 namespace Models;
-include BASE_PATH."/app/crest/src/crest.php";
+include_once BASE_PATH."/app/crest/src/crest.php";
 
 class User{
     private $name;
