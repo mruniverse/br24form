@@ -11,7 +11,7 @@ class User{
 
     public function setCurrentUser(){
         $result = \CRest::call('user.current');
-        return $result;
+        return array_column($result, 'result');
     }
 
     public function getName(){
