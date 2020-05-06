@@ -1,6 +1,6 @@
 <?php
 namespace App;
-require_once($_SERVER['DOCUMENT_ROOT'].'/crest/src/crest.php');
+require_once('/crest/src/crest.php');
 
 class User{
     private $name;
