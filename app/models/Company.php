@@ -22,13 +22,13 @@ class Company{
         );
     }
 
-    public function addCompanyUserfield($field){
+    public function addCompanyUserfield($field, $label){
         return \CRest::call('crm.company.userfield.add',[
             'fields' => [
                 'FIELD_NAME' => $field,
                 'USER_TYPE_ID' => 'string',
-                'EDIT_FORM_LABEL' => $field,
-                'LIST_COLUMN_LABEL' => $field,
+                'EDIT_FORM_LABEL' => $label,
+                'LIST_COLUMN_LABEL' => $label,
                 'SETTINGS' => [
                     'DEFAULT_VALUE' => ""
                 ]

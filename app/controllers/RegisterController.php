@@ -17,6 +17,7 @@ class RegisterController{
     }
 
     public function store(){
+        //Instantiate objects ==================================================
         $contact = new Contact(
             $_POST['name'],
             $_POST['email'],
@@ -27,12 +28,18 @@ class RegisterController{
             $_POST['company'],
             $_POST['cnpj']
         );
+
+        //Create new fields ==================================================
         $contact->addContactUserfield("CPF");
-        $company->addCompanyUserfield("CNPJ");
+        $company->addCompanyUserfield("CNPJ", "CNPJ");
+        $company->addCompanyUserfield("TDEALS","Total de Negócios");
+
+        //Store the objects into bitrix ==================================================
         $contact->addContact();
         $company->addCompany();
 
         header('Location: /');
+        exit;
     }
 
     public function show($id){
