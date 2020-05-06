@@ -4,7 +4,6 @@ namespace App\controllers;
 
 use App\Contact;
 use App\Company;
-use App\View;
 
 class RegisterController{
     public function index(){
