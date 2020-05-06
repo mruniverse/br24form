@@ -9,9 +9,10 @@ class User{
         $this->setName($name);
     }
 
-    public function getCurrentUser(){
+    public function setCurrentUser(){
         $result = \CRest::call('user.current');
-        return array_column($result, 'NAME');
+        $name = array_column($result, 'NAME');
+        $this->setName($name[0]);
     }
 
     public function getName(){

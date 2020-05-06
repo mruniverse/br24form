@@ -13,9 +13,9 @@ class HomeController{
     */
     public function index(){
         $user = new \Models\User("");
-        $name = $user->getCurrentUser();
-        print_r($name);
-//        \App\View::make('index', $name);
+        $user->setCurrentUser();
+        print_r($user);
+//        View::make('index', $user);
     }
 
 }
