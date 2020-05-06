@@ -20,7 +20,7 @@ class HomeController{
     }
 
     public function install(){
-        include_once BASE_PATH."/app/crest/src/crest.php";
+        include_once BASE_PATH."/app/crest/src/install.php";
     }
 
 }
