@@ -12,12 +12,12 @@ class Company{
     }
 
     public function companyExist(){
-        return \CRest::call('crm.company.list', [
+        return !empty(\CRest::call('crm.company.list', [
             'filter' => [
                 'UF_CRM_CNPJ' => $this->cnpj
             ],
             'select' => 'ID',
-        ]);
+        ]));
     }
 
     public function addCompany(){
