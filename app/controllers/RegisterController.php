@@ -46,10 +46,10 @@ class RegisterController{
             $company->addCompany();
         }
 
-        $company->companyContactAdd($company->getCompanyId(), $contact->getContactId());
+        print_r($company->companyContactAdd($company->getCompanyId(), $contact->getContactId()));
 
-        header('Location: /');
-        exit;
+//        header('Location: /');
+//        exit;
     }
 
     public function show($id){
