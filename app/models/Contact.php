@@ -4,13 +4,39 @@ namespace Models;
 include_once BASE_PATH."/app/crest/src/crest.php";
 
 class Contact{
-    private $name, $email, $phone, $cpf;
+    private $id, $name, $email, $phone, $cpf;
 
     public function __construct($name, $email, $phone, $cpf){
         $this->setName($name);
         $this->setEmail($email);
         $this->setPhone($phone);
         $this->setCpf($cpf);
+    }
+
+    public function updateContact(){
+        return \CRest::call('crm.contact.update',
+            [
+                'id' => $this->getContactId(),
+                'fields' => [
+                    'NAME' => $this->getName(),
+                    'EMAIL' => [
+                        '0' => [
+                            'VALUE_TYPE' => "WORK",
+                            'VALUE' => $this->getEmail(),
+                            'TYPE_ID' => "EMAIL",
+                        ]
+                    ],
+                    'PHONE' => [
+                        '0' => [
+                            'VALUE_TYPE' => "WORK",
+                            'VALUE' => $this->getPhone(),
+                            'TYPE_ID' => "PHONE",
+                        ]
+                    ],
+                    'UF_CRM_CPF' => $this->getCpf()
+                ]
+            ]
+        );
     }
 
     public function contactExist(){
@@ -33,6 +59,20 @@ class Contact{
         ]);
 
         return array_value_recursive('ID', $result);
+    }
+
+    public function listContacts(){
+        $result = \CRest::call('crm.contact.list', [
+            'select' => [
+                'ID',
+                'NAME',
+                'EMAIL',
+                'PHONE' => '0',
+                'UF_CRM_CPF'
+            ]
+        ]);
+
+        return $result['result'];
     }
 
     public function addContact(){
@@ -76,6 +116,14 @@ class Contact{
         ]);
 
         return $result;
+    }
+
+    public function getId(){
+        return $this->id;
+    }
+
+    public function setId($id){
+        $this->id = $id;
     }
 
     public function getName(): string{

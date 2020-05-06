@@ -33,6 +33,18 @@ class Company{
         return array_value_recursive('ID', $result);
     }
 
+    public function updateCompany(){
+        return \CRest::call('crm.company.update',
+            [
+                'fields' => [
+                    'TITLE' => $this->getCompany(),
+                    'UF_CRM_CNPJ' => $this->getCnpj()
+                ]
+            ]
+        );
+    }
+
+
     public function companyContactAdd($companyId, $contactId){
         return \CRest::call('crm.company.contact.add', [
             'ID' => $companyId,

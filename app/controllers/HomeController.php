@@ -14,9 +14,14 @@ class HomeController{
     */
     public function index(){
         $user = new \Models\User("");
+        $contact = new \Models\Contact("","","","");
+
+        $contacts = $contact->listContacts();
         $request = $user->setCurrentUser();
         View::make('index', [
-            'request' => $request]);
+            'request' => $request,
+            'contacts' => $contacts
+        ]);
     }
 
     public function install(){

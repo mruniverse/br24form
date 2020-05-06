@@ -34,9 +34,9 @@ class RegisterController{
         $company->addCompanyUserfield("CNPJ", "CNPJ");
         $company->addCompanyUserfield("TDEALS","Total de Negócios");
 
-        //Store the objects into bitrix ==================================================
+        //Store the "objects" into bitrix ==================================================
         if($company->companyExist() && $contact->contactExist()){
-//            $this->update();
+            $this->update($company, $contact);
         } else if ($company->companyExist()){
             $contact->addContact();
         } else if  ($contact->contactExist()){
@@ -46,10 +46,10 @@ class RegisterController{
             $company->addCompany();
         }
 
-        print_r($company->companyContactAdd($company->getCompanyId(), $contact->getContactId()));
+        $company->companyContactAdd($company->getCompanyId(), $contact->getContactId());
 
-//        header('Location: /');
-//        exit;
+        header('Location: /');
+        exit;
     }
 
     public function show($id){
@@ -60,8 +60,9 @@ class RegisterController{
         //
     }
 
-    public function update(Request $request, $id){
-        //
+    public function update(Company $company,Contact $contact){
+        $company->updateCompany();
+        $contact->updateContact();
     }
 
     public function destroy($id){

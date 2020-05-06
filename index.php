@@ -31,7 +31,7 @@ $app->post('/register', function () {
     $Register->store();
 });
 
-//
+
 //// edição de usuário
 //// exibe o formulário de edição
 //$app->get('/edit/{id}', function ($request) {
@@ -41,13 +41,13 @@ $app->post('/register', function () {
 //    $UsersController = new \App\Controllers\UsersController;
 //    $UsersController->edit($id);
 //});
-//
-//// processa o formulário de edição
-//$app->post('/edit', function () {
-//    $UsersController = new \App\Controllers\UsersController;
-//    $UsersController->update();
-//});
-//
+
+// processa o formulário de edição
+$app->post('/update', function () {
+    $Register = new \Controllers\RegisterController();
+    $Register->update();
+});
+
 //// remove um usuário
 //$app->get('/remove/{id}', function ($request) {
 //    // pega o ID da URL
