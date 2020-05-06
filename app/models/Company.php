@@ -29,9 +29,8 @@ class Company{
             ],
             'select' => 'ID',
         ]);
-        $id = $result['result'];
 
-        return $result['result'];
+        return array_value_recursive('ID', $result);
     }
 
     public function companyContactAdd($companyId, $contactId){
