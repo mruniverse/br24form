@@ -10,14 +10,14 @@ require 'init.php';
 
 $app = new \Slim\App(['settings' => ['displayErrorDetails' => true]]);
 
-$app->map(['GET','POST'],'/', function () {
+$app->map(['GET','POST'],'/home', function () {
     $Home = new \App\controllers\HomeController();
     $Home->index();
 });
 
 // adição de usuário
 // exibe o formulário de cadastro
-$app->get('/register/', function ($request, $response, $args) {
+$app->get('/register', function () {
     $Register = new \App\controllers\RegisterController();
     $Register->create();
 });
