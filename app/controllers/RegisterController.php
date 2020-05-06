@@ -4,6 +4,7 @@ namespace App\controllers;
 
 use App\Contact;
 use App\Company;
+use App\View;
 
 class RegisterController{
     public function index(){
@@ -15,16 +16,16 @@ class RegisterController{
         View::make('register');
     }
 
-    public function store($request){
+    public function store(){
         $contact = new Contact(
-            $request->get('name'),
-            $request->get('email'),
-            $request->get('phone'),
-            $request->get('cpf')
+            $_POST['name'],
+            $_POST['email'],
+            $_POST['phone'],
+            $_POST['cpf']
         );
         $company = new Company(
-            $request->get('company'),
-            $request->get('cnpj')
+            $_POST['company'],
+            $_POST['cnpj']
         );
 
         echo '<pre>';
@@ -37,9 +38,7 @@ class RegisterController{
             $company->addCompany();
         echo '</pre>';
 
-
-        echo 'deu bom';
-//        return view('home');
+        header('Location: /');
     }
 
     public function show($id){

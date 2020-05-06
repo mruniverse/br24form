@@ -12,9 +12,7 @@ class HomeController{
     * chama a view index.php do  /home   ou somente   /
     */
     public function index(){
-        $user = new User("");
-        $name = $user->getCurrentUser();
-        \App\View::make('index', $name);
+        \App\View::make('index');
     }
 
 }
