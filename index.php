@@ -1,5 +1,4 @@
 <?php
-require_once('crest/src/crest.php');
 require 'vendor/autoload.php';
 require 'init.php';
 

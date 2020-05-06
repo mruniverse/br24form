@@ -5,6 +5,8 @@ namespace App\controllers;
 use App\Contact;
 use App\Company;
 
+require_once 'crest/src/crest.php';
+
 class HomeController{
 
     /*
