@@ -22,6 +22,24 @@ class Company{
         return empty(!$result['result']);
     }
 
+    public function getCompanyId(){
+        $result = \CRest::call('crm.company.list', [
+            'filter' => [
+                'UF_CRM_CNPJ' => $this->cnpj
+            ],
+            'select' => 'ID',
+        ]);
+
+        return $result['result']['ID'];
+    }
+
+    public function companyContactAdd($companyId, $contactId){
+        return \CRest::call('crm.company.contact.add',[
+           'ID' => $companyId,
+            'fields' => $contactId
+        ]);
+    }
+
     public function addCompany(){
         return \CRest::call('crm.company.add',
             [

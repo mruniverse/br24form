@@ -29,23 +29,26 @@ class RegisterController{
             $_POST['cnpj']
         );
 
-        $status = $company->companyExist();
-        $request = array("status" => $status);
-        if($status){
-            View::make('register', [
-                'request' => $request
-            ]);
+        //Create new fields ==================================================
+        $contact->addContactUserfield("CPF");
+        $company->addCompanyUserfield("CNPJ", "CNPJ");
+        $company->addCompanyUserfield("TDEALS","Total de Negócios");
+
+        //Store the objects into bitrix ==================================================
+        if($company->companyExist() && $contact->contactExist()){
+            $this->update();
+        } else if ($company->companyExist()){
+            $contact->addContact();
+        } else if  ($contact->contactExist()){
+            $company->addCompany();
+        } else{
+            $contact->addContact();
+            $company->addCompany();
         }
-//
-//        //Create new fields ==================================================
-//        $contact->addContactUserfield("CPF");
-//        $company->addCompanyUserfield("CNPJ", "CNPJ");
-//        $company->addCompanyUserfield("TDEALS","Total de Negócios");
-//
-//        //Store the objects into bitrix ==================================================
-//        $contact->addContact();
-//        $company->addCompany();
-//
+
+        echo $company->getCompanyId();
+//        $company->companyContactAdd();
+
 //        header('Location: /');
 //        exit;
     }

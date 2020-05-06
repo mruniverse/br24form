@@ -12,6 +12,19 @@ class Contact{
         $this->setPhone($phone);
         $this->setCpf($cpf);
     }
+
+    public function contactExist(){
+        $result = \CRest::call('crm.contact.list', [
+            'filter' => [
+                'UF_CRM_CPF' => $this->cpf
+            ],
+            'select' => 'ID',
+        ]);
+
+        return empty(!$result['result']);
+    }
+
+
     public function addContact(){
         $result = \CRest::call('crm.contact.add',
             [
