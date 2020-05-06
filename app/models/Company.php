@@ -36,10 +36,8 @@ class Company{
     public function companyContactAdd($companyId, $contactId){
         return \CRest::call('crm.company.contact.add', [
             'ID' => $companyId, [
-                'fields' => [
-                    'CONTACT_ID' => $contactId,
-                    'SORT' => "",
-                    'IS_PRIMARY ', ""
+                "fields" => [
+                    'CONTACT_ID' => $contactId
                 ]
             ]
         ]);
