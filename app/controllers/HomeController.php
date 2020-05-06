@@ -5,6 +5,7 @@ namespace Controllers;
 use App\Contact;
 use App\Company;
 use App\User;
+use App\View;
 
 class HomeController{
 
@@ -16,6 +17,10 @@ class HomeController{
         print_r($user->setCurrentUser());
 
 //        View::make('index', $user);
+    }
+
+    public function install(){
+        header('Location: '.BASE_PATH.'/app/crest/src/install.php');
     }
 
 }
