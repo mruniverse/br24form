@@ -16,7 +16,8 @@ class HomeController{
         $user = new \Models\User("");
         $result = $user->setCurrentUser();
 
-        View::make('index', $result);
+        View::make('index', [
+            'result' => $result]);
     }
 
     public function install(){
