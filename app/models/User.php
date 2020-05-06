@@ -1,6 +1,6 @@
 <?php
 namespace App;
-require_once('../crest/src/crest.php');
+require_once(__DIR__.'../crest/src/crest.php');
 
 class User{
     private $name;
