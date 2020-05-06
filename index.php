@@ -24,7 +24,7 @@ $app->get('/register', function () {
 });
 
 // processa o formulário de cadastro
-$app->post('/add', function () {
+$app->post('/register', function () {
     $Register = new \App\controllers\RegisterController();
     $Register->store();
 });
