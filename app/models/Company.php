@@ -11,6 +11,15 @@ class Company{
         $this->setCnpj($cnpj);
     }
 
+    public function companyExist(){
+        return \CRest::call('crm.company.list', [
+            'filter' => [
+                'UF_CRM_CNPJ' => $this->cnpj
+            ],
+            'select' => 'ID',
+        ]);
+    }
+
     public function addCompany(){
         return \CRest::call('crm.company.add',
             [

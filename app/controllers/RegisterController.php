@@ -29,17 +29,21 @@ class RegisterController{
             $_POST['cnpj']
         );
 
-        //Create new fields ==================================================
-        $contact->addContactUserfield("CPF");
-        $company->addCompanyUserfield("CNPJ", "CNPJ");
-        $company->addCompanyUserfield("TDEALS","Total de Negócios");
-
-        //Store the objects into bitrix ==================================================
-        $contact->addContact();
-        $company->addCompany();
-
-        header('Location: /');
-        exit;
+        echo '<pre>';
+        print_r($company->companyExist());
+        echo '<pre>';
+//
+//        //Create new fields ==================================================
+//        $contact->addContactUserfield("CPF");
+//        $company->addCompanyUserfield("CNPJ", "CNPJ");
+//        $company->addCompanyUserfield("TDEALS","Total de Negócios");
+//
+//        //Store the objects into bitrix ==================================================
+//        $contact->addContact();
+//        $company->addCompany();
+//
+//        header('Location: /');
+//        exit;
     }
 
     public function show($id){
