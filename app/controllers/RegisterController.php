@@ -31,24 +31,24 @@ class RegisterController{
 
         print_r($company->getCompanyId());
 
-//        //Create new fields ==================================================
-//        $contact->addContactUserfield("CPF");
-//        $company->addCompanyUserfield("CNPJ", "CNPJ");
-//        $company->addCompanyUserfield("TDEALS","Total de Negócios");
-//
-//        //Store the objects into bitrix ==================================================
-//        if($company->companyExist() && $contact->contactExist()){
-//            $this->update();
-//        } else if ($company->companyExist()){
-//            $contact->addContact();
-//        } else if  ($contact->contactExist()){
-//            $company->addCompany();
-//        } else{
-//            $contact->addContact();
-//            $company->addCompany();
-//        }
+        //Create new fields ==================================================
+        $contact->addContactUserfield("CPF");
+        $company->addCompanyUserfield("CNPJ", "CNPJ");
+        $company->addCompanyUserfield("TDEALS","Total de Negócios");
 
-//        $company->companyContactAdd();
+        //Store the objects into bitrix ==================================================
+        if($company->companyExist() && $contact->contactExist()){
+            $this->update();
+        } else if ($company->companyExist()){
+            $contact->addContact();
+        } else if  ($contact->contactExist()){
+            $company->addCompany();
+        } else{
+            $contact->addContact();
+            $company->addCompany();
+        }
+
+        $company->companyContactAdd();
 
 //        header('Location: /');
 //        exit;
