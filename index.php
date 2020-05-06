@@ -18,7 +18,6 @@ $app->map(['GET','POST'],'/', function () {
 
 // adição de usuário
 // exibe o formulário de cadastro
-$app->redirect('/index.php/register', '/register');
 $app->get('/register', function () {
     $Register = new \App\controllers\RegisterController();
     $Register->create();
