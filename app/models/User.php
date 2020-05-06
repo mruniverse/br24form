@@ -1,6 +1,5 @@
 <?php
 namespace App;
-require_once('/crest/src/crest.php');
 
 class User{
     private $name;
