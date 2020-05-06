@@ -9,12 +9,12 @@ class User{
         $this->setName($name);
     }
 
-//    public function getCurrentUser(){
-//        $result = \CRest::call('user.current');
-//        $name = array_column($result, 'NAME');
-//
-//        return $name[0];
-//    }
+    public function getCurrentUser(){
+        $result = \CRest::call('user.current');
+        $name = array_column($result, 'NAME');
+
+        return $name[0];
+    }
 
     public function getName(){
         return $this->name;
