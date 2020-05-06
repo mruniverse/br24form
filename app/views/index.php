@@ -6,7 +6,7 @@
     </div>
     <?
     echo "<pre>";
-    while ($contacts) {
+    while ($contacts[]) {
         print_r($contacts);
     }
     echo "<pre>";
