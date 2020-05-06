@@ -13,11 +13,11 @@
                         <a href="create.php" class="btn btn-success pull-right">Add New Employee</a>
                     </div>
                     <?php
-                    echo "<pre>";
-                    foreach ($contacts as $contact) {
-                        print_r($contact);
-                    }
-                    echo "<pre>";
+//                    echo "<pre>";
+//                    foreach ($contacts as $contact) {
+//                        print_r($contact);
+//                    }
+//                    echo "<pre>";
                     if (!empty($contacts)) {
                         echo "<table class='table table-bordered table-striped'>";
                         echo "<thead>";
@@ -31,11 +31,13 @@
                         echo "</thead>";
                         echo "<tbody>";
                         foreach ($contacts as $contact) {
+                            $email = array_value_recursive('VALUE', $contact['EMAIL']);
+                            $phone = array_value_recursive('VALUE', $contact['PHONE']);
                             echo "<tr>";
                             echo "<td>" . $contact['ID'] . "</td>";
                             echo "<td>" . $contact['NAME'] . "</td>";
-                            echo "<td>" . $contact['EMAIL'] . "</td>";
-                            echo "<td>" . $contact['PHONE'] . "</td>";
+                            echo "<td>" . $email . "</td>";
+                            echo "<td>" . $phone . "</td>";
                             echo "<td>" . $contact['UF_CRM_CPF'] . "</td>";
                             echo "<a href='read.php?id=" . $contact['ID'] . "' title='View Record' data-toggle='tooltip'><span class='glyphicon glyphicon-eye-open'></span></a>";
                             echo "<a href='update.php?id=" . $contact['ID'] . "' title='Update Record' data-toggle='tooltip'><span class='glyphicon glyphicon-pencil'></span></a>";
