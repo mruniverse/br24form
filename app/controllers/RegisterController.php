@@ -29,7 +29,7 @@ class RegisterController{
             $_POST['cnpj']
         );
 
-        echo $company->getCompanyId();
+        print_r($company->getCompanyId());
 
 //        //Create new fields ==================================================
 //        $contact->addContactUserfield("CPF");

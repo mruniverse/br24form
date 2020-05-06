@@ -30,8 +30,8 @@ class Company{
             'select' => 'ID',
         ]);
         $id = $result['result'];
-        
-        return $id['ID'];
+
+        return $result['result'];
     }
 
     public function companyContactAdd($companyId, $contactId){
