@@ -29,8 +29,9 @@ class Company{
             ],
             'select' => 'ID',
         ]);
-
-        return $result['result']['ID'];
+        $id = $result['result'];
+        
+        return $id['ID'];
     }
 
     public function companyContactAdd($companyId, $contactId){
