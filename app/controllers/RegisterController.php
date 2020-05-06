@@ -48,7 +48,7 @@ class RegisterController{
             $company->addCompany();
         }
 
-        $company->companyContactAdd();
+//        $company->companyContactAdd();
 
 //        header('Location: /');
 //        exit;
