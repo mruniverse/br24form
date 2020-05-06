@@ -27,16 +27,10 @@ class RegisterController{
             $_POST['company'],
             $_POST['cnpj']
         );
-
-        echo '<pre>';
-            print_r($contact->addContactUserfield("CPF"));
-            print_r($company->addCompanyUserfield("CNPJ"));
-            $contact->addContact();
-        echo '</pre>';
-
-        echo '<pre>';
-            $company->addCompany();
-        echo '</pre>';
+        $contact->addContactUserfield("CPF");
+        $company->addCompanyUserfield("CNPJ");
+        $contact->addContact();
+        $company->addCompany();
 
         header('Location: /');
     }
