@@ -29,9 +29,13 @@ class RegisterController{
             $_POST['cnpj']
         );
 
-        echo '<pre>';
-        print_r($company->companyExist());
-        echo '<pre>';
+        $status = $company->companyExist();
+        $request = array("status" => $status);
+        if($status){
+            View::make('register', [
+                'request' => $request
+            ]);
+        }
 //
 //        //Create new fields ==================================================
 //        $contact->addContactUserfield("CPF");

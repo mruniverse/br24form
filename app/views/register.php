@@ -1,3 +1,8 @@
+<?php if ($request['status'] == 1){ ?>
+    <div class="alert alert-danger" role="alert">
+        Este cadastro já existe!
+    </div>
+<?php } ?>
 <div class="container register">
         <div class="row">
             <div class="col-md-3 register-left">
