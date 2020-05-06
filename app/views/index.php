@@ -4,7 +4,11 @@
             Bem-vindo <?= $request['NAME'] ?>!
         </div>
     </div>
-    <?php
-    print_r($contacts);
+    <?
+    echo "<pre>";
+    while ($contacts) {
+        print_r($contacts);
+    }
+    echo "<pre>";
     ?>
 </div>
