@@ -1,7 +1,7 @@
 <?php
 
 namespace App;
-require_once('crest/src/crest.php');
+require_once('../crest/src/crest.php');
 class Company{
     private $company, $cnpj;
 

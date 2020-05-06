@@ -4,17 +4,16 @@ namespace App\controllers;
 
 use App\Contact;
 use App\Company;
+use App\User;
 
-require_once('../crest/src/crest.php');
 class HomeController{
 
     /*
     * chama a view index.php do  /home   ou somente   /
     */
     public function index(){
-        $result = \CRest::call('user.current');
-        $name = array_column($result, 'NAME');
-
+        $user = new User("");
+        $name = $user->getCurrentUser();
         \App\View::make('index', $name);
     }
 
