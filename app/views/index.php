@@ -1,7 +1,7 @@
 <div class="flex-center position-ref full-height">
     <div class="content">
         <div class="title-guide">
-            Bem-vindo <?php print_r($result) ?>!
+            Bem-vindo <?php $result[0]['NAME'] ?>!
         </div>
     </div>
 </div>
