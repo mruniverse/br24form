@@ -29,8 +29,6 @@ class RegisterController{
             $_POST['cnpj']
         );
 
-        print_r($company->getCompanyId());
-
         //Create new fields ==================================================
         $contact->addContactUserfield("CPF");
         $company->addCompanyUserfield("CNPJ", "CNPJ");
@@ -38,7 +36,7 @@ class RegisterController{
 
         //Store the objects into bitrix ==================================================
         if($company->companyExist() && $contact->contactExist()){
-            $this->update();
+//            $this->update();
         } else if ($company->companyExist()){
             $contact->addContact();
         } else if  ($contact->contactExist()){
@@ -48,10 +46,10 @@ class RegisterController{
             $company->addCompany();
         }
 
-//        $company->companyContactAdd();
+        $company->companyContactAdd($company->getCompanyId(), $contact->getContactId());
 
-//        header('Location: /');
-//        exit;
+        header('Location: /');
+        exit;
     }
 
     public function show($id){
