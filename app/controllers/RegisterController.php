@@ -33,6 +33,7 @@ class RegisterController{
         $company->addCompany();
 
         header('Location: /');
+        exit;
     }
 
     public function show($id){
