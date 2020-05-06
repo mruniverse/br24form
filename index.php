@@ -1,13 +1,12 @@
 <?php
 require 'vendor/autoload.php';
 require 'init.php';
-require_once('crest/src/crest.php');
 
 $app = new \Slim\App(['settings' => ['displayErrorDetails' => true]]);
 
 $app->map(['GET','POST'],'/', function () {
     $Home = new \App\controllers\HomeController();
-    $Home->index(CRest::class);
+    $Home->index();
 });
 
 // adição de usuário
