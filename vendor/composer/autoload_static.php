@@ -23,9 +23,17 @@ class ComposerStaticInitd2f20a1d35b21738e57a2f5ba290c97a
             'Psr\\Http\\Message\\' => 17,
             'Psr\\Container\\' => 14,
         ),
+        'M' => 
+        array (
+            'Models\\' => 7,
+        ),
         'F' => 
         array (
             'FastRoute\\' => 10,
+        ),
+        'C' => 
+        array (
+            'Controllers\\' => 12,
         ),
         'A' => 
         array (
@@ -56,9 +64,17 @@ class ComposerStaticInitd2f20a1d35b21738e57a2f5ba290c97a
         array (
             0 => __DIR__ . '/..' . '/psr/container/src',
         ),
+        'Models\\' => 
+        array (
+            0 => __DIR__ . '/../..' . '/app/models',
+        ),
         'FastRoute\\' => 
         array (
             0 => __DIR__ . '/..' . '/nikic/fast-route/src',
+        ),
+        'Controllers\\' => 
+        array (
+            0 => __DIR__ . '/../..' . '/app/controllers',
         ),
         'App\\' => 
         array (

@@ -1,7 +1,8 @@
 <?php
 
-namespace App;
-require_once('../crest/src/crest.php');
+namespace Models;
+include BASE_PATH."/app/crest/src/crest.php";
+
 class Company{
     private $company, $cnpj;
 
@@ -11,7 +12,7 @@ class Company{
     }
 
     public function addCompany(){
-        $result = \CRest::call('crm.company.add',
+        return \CRest::call('crm.company.add',
             [
                 'fields' => [
                     'TITLE' => $this->getCompany(),
@@ -19,12 +20,10 @@ class Company{
                 ]
             ]
         );
-
-        return $result;
     }
 
     public function addCompanyUserfield($field){
-        $result = \CRest::call('crm.company.userfield.add',[
+        return \CRest::call('crm.company.userfield.add',[
             'fields' => [
                 'FIELD_NAME' => $field,
                 'USER_TYPE_ID' => 'string',
@@ -35,8 +34,6 @@ class Company{
                 ]
             ]
         ]);
-
-        return $result;
     }
 
     public function getCompany(){

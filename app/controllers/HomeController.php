@@ -1,6 +1,6 @@
 <?php
 
-namespace App\controllers;
+namespace Controllers;
 
 use App\Contact;
 use App\Company;

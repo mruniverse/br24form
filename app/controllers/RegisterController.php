@@ -1,9 +1,9 @@
 <?php
 
-namespace App\controllers;
+namespace Controllers;
 
-use App\Contact;
-use App\Company;
+use Models\Contact;
+use Models\Company;
 use App\View;
 
 class RegisterController{

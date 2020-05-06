@@ -5,20 +5,20 @@ require 'init.php';
 $app = new \Slim\App(['settings' => ['displayErrorDetails' => true]]);
 
 $app->map(['GET','POST'],'/', function () {
-    $Home = new \App\controllers\HomeController();
+    $Home = new \Controllers\HomeController();
     $Home->index();
 });
 
 // adição de usuário
 // exibe o formulário de cadastro
 $app->get('/register', function () {
-    $Register = new \App\controllers\RegisterController();
+    $Register = new \Controllers\RegisterController();
     $Register->create();
 });
 
 // processa o formulário de cadastro
 $app->post('/register', function () {
-    $Register = new \App\controllers\RegisterController();
+    $Register = new \Controllers\RegisterController();
     $Register->store();
 });
 
