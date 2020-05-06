@@ -24,6 +24,16 @@ class Contact{
         return empty(!$result['result']);
     }
 
+    public function getContactId(){
+        $result = \CRest::call('crm.contact.list', [
+            'filter' => [
+                'UF_CRM_CPF' => $this->cpf
+            ],
+            'select' => 'ID',
+        ]);
+
+        return array_value_recursive('ID', $result);
+    }
 
     public function addContact(){
         $result = \CRest::call('crm.contact.add',
