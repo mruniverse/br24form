@@ -8,7 +8,7 @@ require 'init.php';
 //$name = array_column($result, 'NAME');
 //echo $name[0];
 
-$app = new \Slim\App(['settings' => ['displayErrorDetails' => true]]);
+$app = new \Slim\App();
 
 
 $app->map(['GET','POST'],'/', function () {
@@ -18,7 +18,6 @@ $app->map(['GET','POST'],'/', function () {
 
 // adição de usuário
 // exibe o formulário de cadastro
-$app->redirect('/register', '/index.php/register');
 $app->get('/index.php/register', function () {
     $Register = new \App\controllers\RegisterController();
     $Register->create();
