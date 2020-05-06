@@ -30,7 +30,7 @@ class RegisterController{
         );
 
         echo '<pre>';
-        print_r($company->companyExist());
+        echo $company->companyExist();
         echo '<pre>';
 //
 //        //Create new fields ==================================================
