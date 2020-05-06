@@ -10,7 +10,7 @@ require 'init.php';
 
 $app = new \Slim\App(['settings' => ['displayErrorDetails' => true]]);
 
-$app->redirect('index.php/', '/');
+$app->redirect('/index.php', '/');
 
 $app->map(['GET','POST'],'/home', function () {
     $Home = new \App\controllers\HomeController();
