@@ -19,7 +19,7 @@ class Company{
             'select' => 'ID',
         ]);
 
-        return $result;
+        return empty(!$result['result']);
     }
 
     public function addCompany(){
