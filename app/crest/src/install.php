@@ -1,6 +1,6 @@
 <?php
 require_once (__DIR__.'/crest.php');
-CRest::checkServer(true);
+CRest::checkServer();
 $result = CRest::installApp();
 if($result['rest_only'] === false):?>
 	<head>
