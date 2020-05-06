@@ -2,7 +2,7 @@
 require 'vendor/autoload.php';
 require 'init.php';
 
-$app = new \Slim\App();
+$app = new \Slim\App(['settings' => ['displayErrorDetails' => true]]);
 
 $app->map(['GET','POST'],'/', function () {
     $Home = new \App\controllers\HomeController();
