@@ -20,33 +20,33 @@
 //                    echo "<pre>";
                     if (!empty($contacts)) {
                         echo "<table class='table table-bordered table-striped'>";
-                        echo "<thead>";
-                        echo "<tr>";
-                        echo "<th>#</th>";
-                        echo "<th>Name</th>";
-                        echo "<th>Email</th>";
-                        echo "<th>Phone</th>";
-                        echo "<th>CPF</th>";
-                        echo "</tr>";
-                        echo "</thead>";
-                        echo "<tbody>";
-                        foreach ($contacts as $contact) {
-                            $email = array_value_recursive('VALUE', $contact['EMAIL']);
-                            $phone = array_value_recursive('VALUE', $contact['PHONE']);
-                            echo "<tr>";
-                            echo "<td>" . $contact['ID'] . "</td>";
-                            echo "<td>" . $contact['NAME'] . "</td>";
-                            echo "<td>" . $email . "</td>";
-                            echo "<td>" . $phone . "</td>";
-                            echo "<td>" . $contact['UF_CRM_CPF'] . "</td>";
-                            echo "<td>";
-                            echo "<a href='read.php?id=" . $contact['ID'] . "' title='View Record' data-toggle='tooltip'><span class='glyphicon glyphicon-eye-open'></span></a>";
-                            echo "<a href='update.php?id=" . $contact['ID'] . "' title='Update Record' data-toggle='tooltip'><span class='glyphicon glyphicon-pencil'></span></a>";
-                            echo "<a href='delete.php?id=" . $contact['ID'] . "' title='Delete Record' data-toggle='tooltip'><span class='glyphicon glyphicon-trash'></span></a>";
-                            echo "</td>";
-                            echo "</tr>";
-                        }
-                        echo "</tbody>";
+                            echo "<thead>";
+                                echo "<tr>";
+                                    echo "<th>#</th>";
+                                    echo "<th>Name</th>";
+                                    echo "<th>Email</th>";
+                                    echo "<th>Phone</th>";
+                                    echo "<th>CPF</th>";
+                                echo "</tr>";
+                            echo "</thead>";
+                            echo "<tbody>";
+                                foreach ($contacts as $contact) {
+                                    $email = array_value_recursive('VALUE', $contact['EMAIL']);
+                                    $phone = array_value_recursive('VALUE', $contact['PHONE']);
+                                    echo "<tr>";
+                                        echo "<td>" . $contact['ID'] . "</td>";
+                                        echo "<td>" . $contact['NAME'] . "</td>";
+                                        echo "<td>" . $email . "</td>";
+                                        echo "<td>" . $phone . "</td>";
+                                        echo "<td>" . $contact['UF_CRM_CPF'] . "</td>";
+                                        echo "<td>";
+                                            echo "<a href='read.php?id=" . $contact['ID'] . "' title='View Record' data-toggle='tooltip'><span class='glyphicon glyphicon-eye-open'></span></a>";
+                                            echo "<a href='update.php?id=" . $contact['ID'] . "' title='Update Record' data-toggle='tooltip'><span class='glyphicon glyphicon-pencil'></span></a>";
+                                            echo "<a href='delete.php?id=" . $contact['ID'] . "' title='Delete Record' data-toggle='tooltip'><span class='glyphicon glyphicon-trash'></span></a>";
+                                        echo "</td>";
+                                    echo "</tr>";
+                                }
+                            echo "</tbody>";
                         echo "</table>";
                     } else {
                         echo "<p class='lead'><em>No records were found.</em></p>";
