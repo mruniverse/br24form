@@ -50,10 +50,9 @@ class UpdateController{
             $_POST['cnpj']
         );
 
-        echo $_POST['company'];
-        echo $_POST['name'];
+        print_r($company);
 
-        $company->updateCompany();
+        print_r($company->updateCompany());
 
 //        header('Location: /');
 //        exit;
