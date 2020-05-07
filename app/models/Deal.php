@@ -15,6 +15,12 @@ class Deal{
         $this->opportunity = $opportunity;
     }
 
+    public function delete($id){
+        return \CRest::call('crm.deal.delete', [
+            'id' => $id
+        ]);
+    }
+
     /**
      * @return mixed
      */

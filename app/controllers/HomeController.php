@@ -13,14 +13,15 @@ class HomeController{
     * chama a view index.php do  /home   ou somente   /
     */
     public function index(){
-        if ($_POST['event'] == 'ONCRMDEALADD'){
-        }
-        echo "<pre>";
-        print_r($_POST);
-        echo "<pre>";
         $user = new \Models\User("");
+        $deal = new \Models\Deal("", "");
         $company = new \Models\Company("", "");
         $contact = new \Models\Contact("","","","");
+
+        if($_REQUEST['event'] == 'ONCRMDEALADD'){
+            $id = array_value_recursive('id', $_REQUEST);
+            $deal->delete($id);
+        }
 
         $companies = $company->listCompanies();
         $contacts = $contact->listContacts();
