@@ -36,7 +36,8 @@ class RegisterController{
 
         //Store the "objects" into bitrix ==================================================
         if($company->companyExist() && $contact->contactExist()){
-            $this->update($company, $contact);
+            $company->updateCompany();
+            $contact->updateContact();
         } else if ($company->companyExist()){
             $contact->addContact();
         } else if  ($contact->contactExist()){
@@ -54,15 +55,6 @@ class RegisterController{
 
     public function show($id){
         //
-    }
-
-    public function edit($id){
-        //
-    }
-
-    public function update(Company $company,Contact $contact){
-        $company->updateCompany();
-        $contact->updateContact();
     }
 
     public function destroy($id){

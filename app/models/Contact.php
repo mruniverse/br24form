@@ -13,6 +13,17 @@ class Contact{
         $this->setCpf($cpf);
     }
 
+    public function setContactByID($id){
+        $result = \CRest::call('crm.contact.get', [
+            $id => 'id'
+        ]);
+
+        $this->setName($result['NAME']);
+        $this->setEmail(array_value_recursive('VALUE', $result['EMAIL']));
+        $this->setPhone(array_value_recursive('VALUE', $result['PHONE']));
+        $this->setCpf($result['UF_CRM_CPF']);
+    }
+
     public function updateContact(){
         return \CRest::call('crm.contact.update',
             [
@@ -148,22 +159,6 @@ class Contact{
 
     public function setPhone(string $phone): void{
         $this->phone = $phone;
-    }
-
-    public function getCompany(): string{
-        return $this->company;
-    }
-
-    public function setCompany(string $company): void{
-        $this->company = $company;
-    }
-
-    public function getCnpj(): string{
-        return $this->cnpj;
-    }
-
-    public function setCnpj(string $cnpj): void{
-        $this->cnpj = $cnpj;
     }
 
     public function getCpf(): string{

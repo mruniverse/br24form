@@ -32,20 +32,20 @@ $app->post('/register', function () {
 });
 
 
-//// edição de usuário
-//// exibe o formulário de edição
-//$app->get('/edit/{id}', function ($request) {
-//    // pega o ID da URL
-//    $id = $request->getAttribute('id');
-//
-//    $UsersController = new \App\Controllers\UsersController;
-//    $UsersController->edit($id);
-//});
+// edição do contato
+// exibe o formulário de edição
+$app->get('/contact/edit/{id}', function ($request) {
+    // pega o ID da URL
+    $id = $request->getAttribute('id');
+
+    $Update = new \Controllers\UpdateController();
+    $Update->edit($id);
+});
 
 // processa o formulário de edição
 $app->post('/update', function () {
-    $Register = new \Controllers\RegisterController();
-    $Register->update();
+    $Update = new \Controllers\UpdateController();
+    $Update->update();
 });
 
 //// remove um usuário

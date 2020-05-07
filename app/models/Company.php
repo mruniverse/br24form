@@ -22,6 +22,15 @@ class Company{
         return empty(!$result['result']);
     }
 
+    public function setCompanyByID($id){
+        $result = \CRest::call('crm.company.get', [
+            $id => 'id'
+        ]);
+
+        $this->setCompany($result['TITLE']);
+        $this->setCnpj($result['UF_CRM_CNPJ']);
+    }
+
     public function listCompanies(){
         $result = \CRest::call('crm.company.list', [
             'select' => [
