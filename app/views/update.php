@@ -2,6 +2,7 @@
         <div class="row">
             <div class="col-md-3 register-left">
                 TESTE
+                <?php print_r($contact) ?>
             </div>
             <div class="col-md-9 register-right">
                 <div class="tab-content" id="myTabContent">
@@ -10,7 +11,7 @@
                         <form method="POST" class="row register-form" action="/update">
                             <div class="col-md-6">
                                 <div class="form-group">
-                                    <input type="text" name="name" class="form-control" placeholder="Your Name" value="<?php print_r($contact['name']) ?>" required/>
+                                    <input type="text" name="name" class="form-control" placeholder="Your Name" value="" required/>
                                 </div>
                                 <div class="form-group">
                                     <input type="email" name="email" class="form-control" placeholder="Your Email" value="<?= $contact['email'] ?>" required/>
