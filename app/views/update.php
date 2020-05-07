@@ -7,7 +7,7 @@
                 <div class="tab-content" id="myTabContent">
                     <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
                         <h3 class="register-heading">Alteração cadastral</h3>
-                        <form method="POST" class="row register-form" action="/edit">
+                        <form method="POST" class="row register-form" action="/update">
                             <div class="col-md-6">
                                 <div class="form-group">
                                     <input type="text" name="name" class="form-control" placeholder="Your Name" value="<?= $contact['name'] ?>" required/>
