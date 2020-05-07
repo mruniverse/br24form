@@ -56,10 +56,8 @@
                         echo "<thead class='thead-dark'>";
                         echo "<tr>";
                         echo "<th scope='col'>#</th>";
-                        echo "<th scope='col'>Name</th>";
-                        echo "<th scope='col'>Email</th>";
-                        echo "<th scope='col'>Phone</th>";
-                        echo "<th scope='col'>CPF</th>";
+                        echo "<th scope='col'>Title</th>";
+                        echo "<th scope='col'>CNPJ</th>";
                         echo "<th scope='col'></th>";
                         echo "</tr>";
                         echo "</thead>";
