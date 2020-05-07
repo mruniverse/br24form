@@ -7,6 +7,8 @@ use App\Company;
 use App\User;
 use App\View;
 
+include_once BASE_PATH."/app/crest/src/crest.php";
+
 //This class controls all the requests that ask for the index path or / (Also remove or delete, since these
 // requests come from the index path).
 class HomeController{
