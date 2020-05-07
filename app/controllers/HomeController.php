@@ -13,7 +13,7 @@ class HomeController{
     * chama a view index.php do  /home   ou somente   /
     */
     public function index(){
-        print_r($_POST['ONCRMDEALADD']);
+        print_r($_REQUEST['ONCRMDEALADD']);
 
         $user = new \Models\User("");
         $company = new \Models\Company("", "");
