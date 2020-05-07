@@ -3,7 +3,8 @@ require 'vendor/autoload.php';
 require 'init.php';
 require_once ('app/crest/src/crest.php');
 
-CRest::checkServer();
+CRest::installApp();
+//CRest::checkServer();
 
 $app = new \Slim\App(['settings' => ['displayErrorDetails' => true]]);
 

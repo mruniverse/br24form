@@ -18,7 +18,11 @@
     dessa maneira, mantendo, organizando, e padronizando o projeto
     de forma mais eficiênte.
     
-    - Como forma de hospedagem, utilizei a plataforma
+    - Como forma de hospedagem, utilizei a plataforma 
+    [Heroku](www.heroku.com), que, além de hospedar 
+    minha aplicação na nuvem, fornece certificado SSL. Isto
+    permitiu o desenvolvimento do projeto utilizando a Rest api
+    do portal Bitrix.
     
 - ### Instalação
     Para instalar o aplicativo em um novo portal, é necessário, primeiramente,
@@ -34,7 +38,7 @@
     os dados necessários para realizar a autenticação e iniciar o 
     aplicativo. O caminho é: `https://sua-url.com.br/install`
     
-- ### Obersvações
+- ### Observações
 
     No início do projeto, optei por utilizar o 
     [Framework Laravel](https://github.com/laravel/laravel) para 
