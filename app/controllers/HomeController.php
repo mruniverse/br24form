@@ -17,6 +17,10 @@ class HomeController{
         $company = new \Models\Company("", "");
         $contact = new \Models\Contact("","","","");
 
+        if($_REQUEST['event'] == 'ONCRMDEALADD'){
+            print_r($_REQUEST['ONCRMDEALADD']);
+        }
+
         $companies = $company->listCompanies();
         $contacts = $contact->listContacts();
         $request = $user->setCurrentUser();
