@@ -22,11 +22,11 @@
                         echo "<table class='table'>";
                             echo "<thead class='thead-dark'>";
                                 echo "<tr>";
-                                    echo "<th>#</th>";
-                                    echo "<th>Name</th>";
-                                    echo "<th>Email</th>";
-                                    echo "<th>Phone</th>";
-                                    echo "<th>CPF</th>";
+                                    echo "<th scope='col'>#</th>";
+                                    echo "<th scope='col'>Name</th>";
+                                    echo "<th scope='col'>Email</th>";
+                                    echo "<th scope='col'>Phone</th>";
+                                    echo "<th scope='col'>CPF</th>";
                                 echo "</tr>";
                             echo "</thead>";
                             echo "<tbody>";
