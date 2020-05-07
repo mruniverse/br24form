@@ -15,7 +15,7 @@ class Contact{
 
     public function setContactByID($id){
         $result = \CRest::call('crm.contact.get', [
-            $id => 'id'
+            'id' => $id
         ]);
 
         $this->setName($result['NAME']);
