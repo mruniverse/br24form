@@ -53,9 +53,15 @@ $app->get('/company/edit/{id}', function ($request) {
 });
 
 // processa o formulário de edição
-$app->post('/update', function () {
+$app->post('/updateContact', function () {
     $Update = new \Controllers\UpdateController();
-    $Update->update();
+    $Update->updateContact();
+});
+
+// processa o formulário de edição
+$app->post('/updateCompany', function () {
+    $Update = new \Controllers\UpdateController();
+    $Update->updateCompany();
 });
 
 // remove um usuário

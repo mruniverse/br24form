@@ -31,23 +31,25 @@ class UpdateController{
         ]);
     }
 
-    public function update(){
-        if($_POST['name'] != null){
-            $contact = new Contact(
-                $_POST['name'],
-                $_POST['email'],
-                $_POST['phone'],
-                $_POST['cpf']
-            );
-            $contact->updateContact();
+    public function updateContact(){
+        $contact = new Contact(
+            $_POST['name'],
+            $_POST['email'],
+            $_POST['phone'],
+            $_POST['cpf']
+        );
+        $contact->updateContact();
 
-        } else{
-            $company = new Company(
-                $_POST['company'],
-                $_POST['cnpj']
-            );
-            $company->updateCompany();
-        }
+        header('Location: /');
+        exit;
+    }
+
+    public function updateCompany(){
+        $company = new Company(
+            $_POST['company'],
+            $_POST['cnpj']
+        );
+        $company->updateCompany();
 
         header('Location: /');
         exit;

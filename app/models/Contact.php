@@ -33,7 +33,7 @@ class Contact{
     }
 
     public function updateContact(){
-        return \CRest::call('crm.contact.update',
+        return \CRest::call('crm.contact.updateContact',
             [
                 'id' => $this->getContactId(),
                 'fields' => [
