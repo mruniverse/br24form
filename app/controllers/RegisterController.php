@@ -32,7 +32,7 @@ class RegisterController{
         //Create new fields ==================================================
         $contact->addContactUserfield("CPF");
         $company->addCompanyUserfield("CNPJ", "CNPJ");
-        $company->addCompanyUserfield("TDEALS","Total de Negócios");
+        $company->addCompanyUserfield("TDEALS","Total em Negócios (R$)");
 
         //Store the "objects" into bitrix ==================================================
         if($company->companyExist() && $contact->contactExist()){
