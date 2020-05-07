@@ -8,9 +8,8 @@
         <div class="container-fluid">
             <div class="row">
                 <div class="col-md-12">
-                    <div class="page-header clearfix">
+                    <div class="title-guide">
                         <h2 class="pull-left">Employees Details</h2>
-                        <a href="/register" class="btn btn-success pull-right">Add New Employee</a>
                     </div>
                     <?php
 //                    echo "<pre>";
@@ -19,7 +18,7 @@
 //                    }
 //                    echo "<pre>";
                     if (!empty($contacts)) {
-                        echo "<table class='table'>";
+                        echo "<table class='table-light'>";
                             echo "<thead class='thead-dark'>";
                                 echo "<tr>";
                                     echo "<th scope='col'>#</th>";
