@@ -1,7 +1,6 @@
 <div class="container register">
         <div class="row">
             <div class="col-md-3 register-left">
-                TESTE
             </div>
             <div class="col-md-9 register-right">
                 <div class="tab-content" id="myTabContent">
