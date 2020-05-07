@@ -1,25 +1,23 @@
 <?php
 require 'vendor/autoload.php';
 require 'init.php';
-require_once ('app/crest/src/crest.php');
 
-CRest::installApp();
-//CRest::checkServer();
-
+//App Initializer
 $app = new \Slim\App(['settings' => ['displayErrorDetails' => true]]);
 
+//Setting all the routes =============================================================================
 $app->map(['GET','POST'],'/install', function () {
     $Home = new \Controllers\HomeController();
     $Home->install();
 });
 
+//É o caminho padrão, a maioria das requisições que precisam de alguma validação, entra aqui =========================
 $app->map(['GET','POST'],'/', function () {
     $Home = new \Controllers\HomeController();
     $Home->index();
 });
 
 
-// adição de usuário
 // exibe o formulário de cadastro
 $app->get('/register', function () {
     $Register = new \Controllers\RegisterController();
@@ -65,7 +63,7 @@ $app->post('/company/update', function () {
     $Update->updateCompany();
 });
 
-// remove um usuário
+// remove um contato
 $app->get('/contact/remove/{id}', function ($request) {
     // pega o ID da URL
     $id = $request->getAttribute('id');
@@ -74,6 +72,7 @@ $app->get('/contact/remove/{id}', function ($request) {
     $Home->contactRemove($id);
 });
 
+// remove uma compania
 $app->get('/company/remove/{id}', function ($request) {
     // pega o ID da URL
     $id = $request->getAttribute('id');
@@ -82,4 +81,6 @@ $app->get('/company/remove/{id}', function ($request) {
     $Home->companyRemove($id);
 });
 
+
+//Run App
 $app->run();

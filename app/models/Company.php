@@ -12,13 +12,14 @@ class Company{
         $this->setTdeals(0);
     }
 
+    //Delete company using it's ID ====================================================================
     public function delete($id){
         return \CRest::call('crm.company.delete', [
             'id' => $id
         ]);
     }
 
-
+    //Return if a company exist (bool) =================================================================
     public function companyExist(){
         $result = \CRest::call('crm.company.list', [
             'filter' => [
@@ -30,6 +31,7 @@ class Company{
         return empty(!$result['result']);
     }
 
+    //Set company values given the company ID ====================================================================
     public function setCompanyByID($id){
         $result = \CRest::call('crm.company.get', [
             'id' => $id
@@ -42,6 +44,7 @@ class Company{
         $this->setTdeals($result['UF_CRM_TDEALS']);
     }
 
+    //Return a list of companies =====================================================================================
     public function listCompanies(){
         $result = \CRest::call('crm.company.list', [
             'select' => [
@@ -78,7 +81,7 @@ class Company{
         );
     }
 
-
+    //Add a contact to the specified company ====================================================================
     public function companyContactAdd($companyId, $contactId){
         return \CRest::call('crm.company.contact.add', [
             'ID' => $companyId,
@@ -88,6 +91,7 @@ class Company{
         ]);
     }
 
+    //Add company into the portal ====================================================================
     public function addCompany(){
         return \CRest::call('crm.company.add',
             [
@@ -99,6 +103,7 @@ class Company{
         );
     }
 
+    //Add a new field to a company ====================================================================
     public function addCompanyUserfield($field, $label){
         return \CRest::call('crm.company.userfield.add',[
             'fields' => [

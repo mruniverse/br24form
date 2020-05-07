@@ -19,6 +19,7 @@ class Contact{
         ]);
     }
 
+    //Set contact values given the contact ID ====================================================================
     public function setContactByID($id){
         $result = \CRest::call('crm.contact.get', [
             'id' => $id
@@ -31,6 +32,7 @@ class Contact{
         $this->setPhone(array_value_recursive('VALUE', $result['PHONE']));
         $this->setCpf($result['UF_CRM_CPF']);
     }
+
 
     public function updateContact(){
         return \CRest::call('crm.contact.update',
@@ -58,6 +60,7 @@ class Contact{
         );
     }
 
+    //Return if a contact exist (bool) =================================================================
     public function contactExist(){
         $result = \CRest::call('crm.contact.list', [
             'filter' => [

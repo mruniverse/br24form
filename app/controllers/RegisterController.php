@@ -6,6 +6,8 @@ use Models\Contact;
 use Models\Company;
 use App\View;
 
+
+//This class controls all the requests that ask for the form to register path or /register =========================
 class RegisterController{
     public function index(){
 

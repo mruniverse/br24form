@@ -5,6 +5,8 @@ use Models\Contact;
 use Models\Company;
 use App\View;
 
+
+//This class controls all the requests that ask for update or edit ==============================================
 class UpdateController{
 
     public function index(){
