@@ -9,7 +9,7 @@
             <div class="row">
                 <div class="col-md-12">
                     <div class="title-guide">
-                        <h2 class="pull-left">Employees Details</h2>
+                        <h2 align="left">Employees Details</h2>
                     </div>
                     <?php
 //                    echo "<pre>";
@@ -26,6 +26,7 @@
                                     echo "<th scope='col'>Email</th>";
                                     echo "<th scope='col'>Phone</th>";
                                     echo "<th scope='col'>CPF</th>";
+                                    echo "<th scope='col'></th>";
                                 echo "</tr>";
                             echo "</thead>";
                             echo "<tbody>";
@@ -40,9 +41,11 @@
                                         echo "<td>" . $contact['UF_CRM_CPF'] . "</td>";
                                         echo "<td>";
                                             echo "<a href='update.php?id=" . $contact['ID'] .
-                                                "' title='Update Record' data-toggle='tooltip'><span class='glyphicon glyphicon-pencil'></span></a>";
-                                            echo "<a href='delete.php?id=" . $contact['ID'] .
-                                                "' title='Delete Record' data-toggle='tooltip'><span class='glyphicon glyphicon-trash'></span></a>";
+                                                "' title='Update Record'>
+                                                <span class='bx-button bx-button-accept'>Update</span></a>";
+                                            echo "<a href='update.php?id=" . $contact['ID'] .
+                                                "' title='Delete Record'>
+                                                        <span class='bx-button bx-button-decline'>Delete</span></a>";
                                         echo "</td>";
                                     echo "</tr>";
                                 }
