@@ -13,6 +13,7 @@ class HomeController{
 
     //This is the first function to be executed, it came from: "/" or "...url.com/"
     public function index(){
+        \CRest::installApp();
         //Instantiating Models or Classes ========================================================================
         $user = new \Models\User("");
         $deal = new \Models\Deal("", "", "");
