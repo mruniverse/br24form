@@ -34,7 +34,7 @@
                                     $email = array_value_recursive('VALUE', $contact['EMAIL']);
                                     $phone = array_value_recursive('VALUE', $contact['PHONE']);
                                     echo "<tr>";
-                                        echo "<td>" . $contact['ID'] . "</td>";
+                                        echo "<th scope='row'>" . $contact['ID'] . "</th>";
                                         echo "<td>" . $contact['NAME'] . "</td>";
                                         echo "<td>" . $email . "</td>";
                                         echo "<td>" . $phone . "</td>";
