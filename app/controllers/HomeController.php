@@ -14,9 +14,6 @@ class HomeController{
     */
     public function index(){
 
-        print_r($_REQUEST);
-        writeToLog($_REQUEST, 'incoming');
-
         /** * Write data to log file. * * @param mixed $data * @param string $title * * @return bool */
         function writeToLog($data, $title = ''){
             $log = "\n------------------------\n";
@@ -27,6 +24,9 @@ class HomeController{
             file_put_contents(getcwd() . '/hook.log', $log, FILE_APPEND);
             return true;
         }
+
+        print_r($_REQUEST);
+        writeToLog($_REQUEST, 'incoming');
 
         $user = new \Models\User("");
         $company = new \Models\Company("", "");
