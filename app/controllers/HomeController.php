@@ -18,7 +18,7 @@ class HomeController{
         $company = new \Models\Company("", "");
         $contact = new \Models\Contact("","","","");
 
-        if(array_value_recursive('event', '$_REQUEST') == 'ONCRMDEALADD'){
+        if(array_value_recursive('event', $_REQUEST) == 'ONCRMDEALADD'){
             $id = array_value_recursive('ID', $_REQUEST);
             $deal->delete($id);
         }
