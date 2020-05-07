@@ -66,6 +66,7 @@ class Company{
     public function updateCompany(){
         return \CRest::call('crm.company.update',
             [
+                'id' => $this->getCompanyId(),
                 'fields' => [
                     'TITLE' => $this->getCompany(),
                     'UF_CRM_CNPJ' => $this->getCnpj()
