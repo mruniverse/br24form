@@ -16,7 +16,6 @@
                                     <input type="text" name="cnpj" class="form-control" id="CNPJ" placeholder="CNPJ" value="<?= $company->getCnpj() ?>" required>
                                     <script>$("#CNPJ").mask("99.999.999/9999-99");</script>
                                 </div>
-                                <input type="hidden" name="operation" value="store">
                                 <input type="submit" class="btnRegister" value="Register"/>
                             </div>
                         </form>
