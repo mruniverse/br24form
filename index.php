@@ -5,8 +5,6 @@ require 'init.php';
 
 //CRest::checkServer();
 
-print_r($_POST['ONCRMDEALADD']);
-
 $app = new \Slim\App(['settings' => ['displayErrorDetails' => true]]);
 
 $app->map(['GET','POST'],'/install', function () {
