@@ -13,13 +13,11 @@ class HomeController{
     * chama a view index.php do  /home   ou somente   /
     */
     public function index(){
-        if($_POST['ONCRMDEALADD']){
-            header('Location: /');
+        if ($_POST['event'] == 'ONCRMDEALADD'){
         }
         echo "<pre>";
-            print_r($_POST['ONCRMDEALADD']);
+        print_r($_POST);
         echo "<pre>";
-
         $user = new \Models\User("");
         $company = new \Models\Company("", "");
         $contact = new \Models\Contact("","","","");
