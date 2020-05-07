@@ -26,29 +26,28 @@ class UpdateController{
 
         $company->setCompanyByID($id);
 
-        View::make('update', [
+        View::make('updateCompany', [
             'company' => $company
         ]);
     }
 
     public function update(){
-        //Instantiate objects ==================================================
-        $contact = new Contact(
-            $_POST['name'],
-            $_POST['email'],
-            $_POST['phone'],
-            $_POST['cpf']
-        );
-        $company = new Company(
-            $_POST['company'],
-            $_POST['cnpj']
-        );
+        if($_POST['name'] != null){
+            $contact = new Contact(
+                $_POST['name'],
+                $_POST['email'],
+                $_POST['phone'],
+                $_POST['cpf']
+            );
+            $contact->updateContact();
 
-        //Store the "objects" into bitrix ==================================================
-        $company->updateCompany();
-        $contact->updateContact();
-
-        $company->companyContactAdd($company->getCompanyId(), $contact->getContactId());
+        } else{
+            $company = new Company(
+                $_POST['company'],
+                $_POST['cnpj']
+            );
+            $company->updateCompany();
+        }
 
         header('Location: /');
         exit;
