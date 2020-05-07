@@ -26,7 +26,7 @@
                                     echo "<th scope='col'>Email</th>";
                                     echo "<th scope='col'>Phone</th>";
                                     echo "<th scope='col'>CPF</th>";
-                                    echo "<th scope='col'></th>";
+//                                    echo "<th scope='col'></th>";
                                 echo "</tr>";
                             echo "</thead>";
                             echo "<tbody>";
@@ -44,7 +44,7 @@
                                             <span class='bx-button bx-button-accept'>Update</span></a>";
                                             echo "<a href='update.php?id=" . $contact['ID'] . "'>
                                             <span class='bx-button bx-button-decline'>Delete</span></a>";
-//                                        echo "</td>";
+                                        echo "</td>";
                                     echo "</tr>";
                                 }
                             echo "</tbody>";
