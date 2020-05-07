@@ -36,7 +36,7 @@
                                         echo "<td>" . $contact['UF_CRM_CPF'] . "</td>";
                                         echo "<td align='right'>";
                                             echo "<a href='contact/edit/" . $contact['ID'] . "' class='btn btn-dark'>Update</a>";
-                                            echo "<a href='contact/remove/" . $contact['ID'] . "' class='btn btn-dark'>Delete</a>";
+                                            echo "<a href='contact/remove/" . $contact['ID'] . "' class='btn btn-danger'>Delete</a>";
                                         echo "</td>";
                                     echo "</tr>";
                                 }
@@ -69,7 +69,7 @@
                             echo "<td>" . $company['UF_CRM_CNPJ'] . "</td>";
                             echo "<td align='right'>";
                             echo "<a href='company/edit/" . $company['ID'] . "' class='btn btn-dark'>Update</a>";
-                            echo "<a href='company/remove/" . $company['ID'] . "' class='btn btn-dark'>Delete</a>";
+                            echo "<a href='company/remove/" . $company['ID'] . "' class='btn btn-danger'>Delete</a>";
                             echo "</td>";
                             echo "</tr>";
                         }
