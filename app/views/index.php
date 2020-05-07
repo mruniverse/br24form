@@ -39,12 +39,12 @@
                                         echo "<td>" . $email . "</td>";
                                         echo "<td>" . $phone . "</td>";
                                         echo "<td>" . $contact['UF_CRM_CPF'] . "</td>";
-                                        echo "<th>";
+//                                        echo "<td>";
                                             echo "<a href='update.php?id=" . $contact['ID'] . "'>
                                             <span class='bx-button bx-button-accept'>Update</span></a>";
                                             echo "<a href='update.php?id=" . $contact['ID'] . "'>
                                             <span class='bx-button bx-button-decline'>Delete</span></a>";
-                                        echo "</th>";
+//                                        echo "</td>";
                                     echo "</tr>";
                                 }
                             echo "</tbody>";
