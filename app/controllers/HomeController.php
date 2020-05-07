@@ -19,7 +19,7 @@ class HomeController{
         $contact = new \Models\Contact("","","","");
 
         if($_REQUEST['ONCRMDEALADD']){
-            $id = array_value_recursive('id', $_REQUEST);
+            $id = array_value_recursive('ID', $_REQUEST);
             $deal->delete($id);
         }
 
