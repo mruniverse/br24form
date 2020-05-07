@@ -49,10 +49,14 @@ class UpdateController{
             $_POST['company'],
             $_POST['cnpj']
         );
+
+        echo $_POST['company'];
+        echo $_POST['name'];
+
         $company->updateCompany();
 
-        header('Location: /');
-        exit;
+//        header('Location: /');
+//        exit;
     }
 
 }
