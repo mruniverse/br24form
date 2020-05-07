@@ -18,6 +18,8 @@ class Contact{
             'id' => $id
         ]);
 
+        $result = $result['result'];
+
         $this->setName($result['NAME']);
         $this->setEmail(array_value_recursive('VALUE', $result['EMAIL']));
         $this->setPhone(array_value_recursive('VALUE', $result['PHONE']));
