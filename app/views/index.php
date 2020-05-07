@@ -18,7 +18,7 @@
 //                    }
 //                    echo "<pre>";
                     if (!empty($contacts)) {
-                        echo "<table>";
+                        echo "<table class='table table-striped'>";
                             echo "<thead class='thead-dark'>";
                                 echo "<tr>";
                                     echo "<th scope='col'>#</th>";
