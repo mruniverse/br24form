@@ -19,8 +19,8 @@
 //                    }
 //                    echo "<pre>";
                     if (!empty($contacts)) {
-                        echo "<table class='table table-bordered table-striped'>";
-                            echo "<thead>";
+                        echo "<table class='table'>";
+                            echo "<thead class='thead-dark'>";
                                 echo "<tr>";
                                     echo "<th>#</th>";
                                     echo "<th>Name</th>";
