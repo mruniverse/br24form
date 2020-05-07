@@ -11,6 +11,13 @@ class Company{
         $this->setCnpj($cnpj);
     }
 
+    public function delete($id){
+        return \CRest::call('crm.company.delete', [
+            'id' => $id
+        ]);
+    }
+
+
     public function companyExist(){
         $result = \CRest::call('crm.company.list', [
             'filter' => [

@@ -13,6 +13,12 @@ class Contact{
         $this->setCpf($cpf);
     }
 
+    public function delete($id){
+        return \CRest::call('crm.contact.delete', [
+            'id' => $id
+        ]);
+    }
+
     public function setContactByID($id){
         $result = \CRest::call('crm.contact.get', [
             'id' => $id

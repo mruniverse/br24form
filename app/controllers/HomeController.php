@@ -27,6 +27,23 @@ class HomeController{
         ]);
     }
 
+    public function contactRemove($id){
+        $contact = new \Models\Contact("","","","");
+        $contact->delete($id);
+
+        header('Location: /');
+        exit;
+    }
+
+    public function companyRemove($id){
+        $company = new \Models\Company("", "");
+        $company->delete($id);
+
+        header('Location: /');
+        exit;
+    }
+
+
     public function install(){
         include_once BASE_PATH."/app/crest/src/install.php";
     }

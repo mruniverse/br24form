@@ -7,16 +7,16 @@ require 'init.php';
 
 $app = new \Slim\App(['settings' => ['displayErrorDetails' => true]]);
 
+$app->map(['GET','POST'],'/install', function () {
+    $Home = new \Controllers\HomeController();
+    $Home->install();
+});
 
 $app->map(['GET','POST'],'/', function () {
     $Home = new \Controllers\HomeController();
     $Home->index();
 });
 
-$app->map(['GET','POST'],'/install', function () {
-    $Home = new \Controllers\HomeController();
-    $Home->install();
-});
 
 // adição de usuário
 // exibe o formulário de cadastro
@@ -39,7 +39,17 @@ $app->get('/contact/edit/{id}', function ($request) {
     $id = $request->getAttribute('id');
 
     $Update = new \Controllers\UpdateController();
-    $Update->edit($id);
+    $Update->contactEdit($id);
+});
+
+// edição da compania
+// exibe o formulário de edição
+$app->get('/company/edit/{id}', function ($request) {
+    // pega o ID da URL
+    $id = $request->getAttribute('id');
+
+    $Update = new \Controllers\UpdateController();
+    $Update->companyEdit($id);
 });
 
 // processa o formulário de edição
@@ -48,13 +58,21 @@ $app->post('/update', function () {
     $Update->update();
 });
 
-//// remove um usuário
-//$app->get('/remove/{id}', function ($request) {
-//    // pega o ID da URL
-//    $id = $request->getAttribute('id');
-//
-//    $UsersController = new \App\Controllers\UsersController;
-//    $UsersController->remove($id);
-//});
+// remove um usuário
+$app->get('/contact/remove/{id}', function ($request) {
+    // pega o ID da URL
+    $id = $request->getAttribute('id');
+
+    $Home = new \Controllers\HomeController();
+    $Home->contactRemove($id);
+});
+
+$app->get('/company/remove/{id}', function ($request) {
+    // pega o ID da URL
+    $id = $request->getAttribute('id');
+
+    $Home = new \Controllers\HomeController();
+    $Home->companyRemove($id);
+});
 
 $app->run();

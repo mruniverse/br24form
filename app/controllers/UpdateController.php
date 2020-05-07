@@ -11,13 +11,23 @@ class UpdateController{
 
     }
 
-    public function edit($id){
+    public function contactEdit($id){
         $contact = new \Models\Contact("","","","");
 
         $contact->setContactByID($id);
 
         View::make('update', [
             'contact' => $contact
+        ]);
+    }
+
+    public function companyEdit($id){
+        $company = new \Models\Company("","");
+
+        $company->setCompanyByID($id);
+
+        View::make('update', [
+            'company' => $company
         ]);
     }
 
