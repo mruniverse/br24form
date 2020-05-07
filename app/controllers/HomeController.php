@@ -25,7 +25,9 @@ class HomeController{
             return true;
         }
 
+        echo "<pre>";
         print_r($_REQUEST);
+        echo "<pre>";
         writeToLog($_REQUEST, 'incoming');
 
         $user = new \Models\User("");
