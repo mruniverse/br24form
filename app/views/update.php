@@ -10,7 +10,7 @@
                         <form method="POST" class="row register-form" action="/update">
                             <div class="col-md-6">
                                 <div class="form-group">
-                                    <input type="text" name="name" class="form-control" placeholder="Your Name" value="<?= $contact['name'] ?>" required/>
+                                    <input type="text" name="name" class="form-control" placeholder="Your Name" value="<?php print_r($contact['name']) ?>" required/>
                                 </div>
                                 <div class="form-group">
                                     <input type="email" name="email" class="form-control" placeholder="Your Email" value="<?= $contact['email'] ?>" required/>
