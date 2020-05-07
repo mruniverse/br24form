@@ -18,7 +18,7 @@
 //                    }
 //                    echo "<pre>";
                     if (!empty($contacts)) {
-                        echo "<table class='table-light'>";
+                        echo "<table>";
                             echo "<thead class='thead-dark'>";
                                 echo "<tr>";
                                     echo "<th scope='col'>#</th>";
