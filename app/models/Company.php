@@ -34,6 +34,8 @@ class Company{
             'id' => $id
         ]);
 
+        $result = $result['result'];
+
         $this->setCompany($result['TITLE']);
         $this->setCnpj($result['UF_CRM_CNPJ']);
     }
