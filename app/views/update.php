@@ -2,7 +2,7 @@
         <div class="row">
             <div class="col-md-3 register-left">
                 TESTE
-                <?php print_r($contact) ?>
+                <?php echo $contact->getName(); ?>
             </div>
             <div class="col-md-9 register-right">
                 <div class="tab-content" id="myTabContent">
