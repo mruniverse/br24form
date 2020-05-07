@@ -4,11 +4,12 @@ namespace Models;
 include_once BASE_PATH."/app/crest/src/crest.php";
 
 class Company{
-    private $company, $cnpj;
+    private $company, $cnpj, $tdeals;
 
     public function __construct($company, $cnpj){
         $this->setCompany($company);
         $this->setCnpj($cnpj);
+        $this->setTdeals(0);
     }
 
     public function delete($id){
@@ -38,6 +39,7 @@ class Company{
 
         $this->setCompany($result['TITLE']);
         $this->setCnpj($result['UF_CRM_CNPJ']);
+        $this->setTdeals($result['UF_CRM_TDEALS']);
     }
 
     public function listCompanies(){
@@ -69,7 +71,8 @@ class Company{
                 'id' => $this->getCompanyId(),
                 'fields' => [
                     'TITLE' => $this->getCompany(),
-                    'UF_CRM_CNPJ' => $this->getCnpj()
+                    'UF_CRM_CNPJ' => $this->getCnpj(),
+                    'UF_CRM_TDEALS' => $this->getTdeals()
                 ]
             ]
         );
@@ -108,6 +111,14 @@ class Company{
                 ]
             ]
         ]);
+    }
+
+    public function getTdeals(){
+        return $this->tdeals;
+    }
+
+    public function setTdeals($tdeals){
+        $this->tdeals = $tdeals;
     }
 
     public function getCompany(){

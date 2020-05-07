@@ -14,13 +14,16 @@ class HomeController{
     */
     public function index(){
         $user = new \Models\User("");
-        $deal = new \Models\Deal("", "");
+        $deal = new \Models\Deal("", "", "");
         $company = new \Models\Company("", "");
         $contact = new \Models\Contact("","","","");
 
         if(array_value_recursive('event', $_REQUEST) == 'ONCRMDEALADD'){
             $id = array_value_recursive('ID', $_REQUEST);
-            $deal->delete($id);
+            $deal->setDealByID($id);
+            $company->setCompanyByID($deal->getCompanyId());
+            $company->setTdeals($company->getTdeals()+$deal->getOpportunity());
+            $company->updateCompany();
         }
 
         $companies = $company->listCompanies();
