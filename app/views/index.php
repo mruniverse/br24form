@@ -9,7 +9,7 @@
             <div class="row">
                 <div class="col-md-12">
                     <div class="title-guide">
-                        <h2 align="left">Employees Details</h2>
+                        <h2 class="text-white" align="left">Employees Details</h2>
                     </div>
                     <?php
 //                    echo "<pre>";
