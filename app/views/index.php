@@ -26,7 +26,7 @@
                                     echo "<th scope='col'>Email</th>";
                                     echo "<th scope='col'>Phone</th>";
                                     echo "<th scope='col'>CPF</th>";
-//                                    echo "<th scope='col'></th>";
+                                    echo "<th scope='col'></th>";
                                 echo "</tr>";
                             echo "</thead>";
                             echo "<tbody>";
@@ -40,8 +40,8 @@
                                         echo "<td>" . $phone . "</td>";
                                         echo "<td>" . $contact['UF_CRM_CPF'] . "</td>";
                                         echo "<td>";
-                                            echo "<a href='https://google.com' class='btn btn-primary'>Update</a>";
-                                            echo "<a href='https://google.com' class='btn btn-primary'>Delete</a>";
+                                            echo "<a href='https://google.com' class='btn btn-dark'>Update</a>";
+                                            echo "<a href='https://google.com' class='btn btn-danger'>Delete</a>";
                                         echo "</td>";
                                     echo "</tr>";
                                 }
