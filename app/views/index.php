@@ -35,7 +35,7 @@
                                         echo "<td>" . $phone . "</td>";
                                         echo "<td>" . $contact['UF_CRM_CPF'] . "</td>";
                                         echo "<td align='right'>";
-                                            echo "<a href='contact/edit/'" . $contact['ID'] . " class='btn btn-dark'>Update</a>";
+                                            echo "<a href='contact/edit/" . $contact['ID'] . "' class='btn btn-dark'>Update</a>";
                                             echo "<a href='https://google.com' class='btn btn-danger'>Delete</a>";
                                         echo "</td>";
                                     echo "</tr>";
