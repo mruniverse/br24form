@@ -9,14 +9,9 @@
             <div class="row">
                 <div class="col-md-12">
                     <div class="title-guide">
-                        <h2 class="text-white" align="left">Employees Details</h2>
+                        <h2 class="text-white" align="left">Contacts Details</h2>
                     </div>
                     <?php
-//                    echo "<pre>";
-//                    foreach ($contacts as $contact) {
-//                        print_r($contact);
-//                    }
-//                    echo "<pre>";
                     if (!empty($contacts)) {
                         echo "<table class='table table-striped'>";
                             echo "<thead class='thead-dark'>";
@@ -51,6 +46,42 @@
                         echo "<p class='lead'><em>No records were found.</em></p>";
                     }
                     ?>
+<!--                Companies ========================================================================-->
+                    <div class="title-guide">
+                        <h2 class="text-white" align="left">Companies Details</h2>
+                    </div>
+                    <?php
+                    if (!empty($companies)) {
+                        echo "<table class='table table-striped'>";
+                        echo "<thead class='thead-dark'>";
+                        echo "<tr>";
+                        echo "<th scope='col'>#</th>";
+                        echo "<th scope='col'>Name</th>";
+                        echo "<th scope='col'>Email</th>";
+                        echo "<th scope='col'>Phone</th>";
+                        echo "<th scope='col'>CPF</th>";
+                        echo "<th scope='col'></th>";
+                        echo "</tr>";
+                        echo "</thead>";
+                        echo "<tbody>";
+                        foreach ($companies as $company) {
+                            echo "<tr>";
+                            echo "<th scope='row'>" . $company['ID'] . "</th>";
+                            echo "<td>" . $company['TITLE'] . "</td>";
+                            echo "<td>" . $company['UF_CRM_CNPJ'] . "</td>";
+                            echo "<td align='right'>";
+                            echo "<a href='https://google.com' class='btn btn-dark'>Update</a>";
+                            echo "<a href='https://google.com' class='btn btn-danger'>Delete</a>";
+                            echo "</td>";
+                            echo "</tr>";
+                        }
+                        echo "</tbody>";
+                        echo "</table>";
+                    } else {
+                        echo "<p class='lead'><em>No records were found.</em></p>";
+                    }
+                    ?>
+
                 </div>
             </div>
         </div>

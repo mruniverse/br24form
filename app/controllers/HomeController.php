@@ -14,13 +14,16 @@ class HomeController{
     */
     public function index(){
         $user = new \Models\User("");
+        $company = new \Models\Company("", "");
         $contact = new \Models\Contact("","","","");
 
+        $companies = $company->listCompanies();
         $contacts = $contact->listContacts();
         $request = $user->setCurrentUser();
         View::make('index', [
             'request' => $request,
-            'contacts' => $contacts
+            'contacts' => $contacts,
+            'companies' => $companies
         ]);
     }
 
