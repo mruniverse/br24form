@@ -64,7 +64,7 @@ class Company{
     }
 
     public function updateCompany(){
-        return \CRest::call('crm.company.updateContact',
+        return \CRest::call('crm.company.update',
             [
                 'fields' => [
                     'TITLE' => $this->getCompany(),

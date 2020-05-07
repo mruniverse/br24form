@@ -53,13 +53,13 @@ $app->get('/company/edit/{id}', function ($request) {
 });
 
 // processa o formulário de edição
-$app->post('/updateContact', function () {
+$app->post('/contact/update', function () {
     $Update = new \Controllers\UpdateController();
     $Update->updateContact();
 });
 
 // processa o formulário de edição
-$app->post('/updateCompany', function () {
+$app->post('/company/update', function () {
     $Update = new \Controllers\UpdateController();
     $Update->updateCompany();
 });
