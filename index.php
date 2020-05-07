@@ -1,13 +1,11 @@
 <?php
 require 'vendor/autoload.php';
 require 'init.php';
-require_once ('app/crest/src/crest.php');
 
-CRest::installApp();
-//CRest::checkServer();
-
+//App Initializer
 $app = new \Slim\App(['settings' => ['displayErrorDetails' => true]]);
 
+//Setting all the routes =============================================================================
 $app->map(['GET','POST'],'/install', function () {
     $Home = new \Controllers\HomeController();
     $Home->install();
@@ -82,4 +80,6 @@ $app->get('/company/remove/{id}', function ($request) {
     $Home->companyRemove($id);
 });
 
+
+//Run App
 $app->run();
