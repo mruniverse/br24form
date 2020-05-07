@@ -3,26 +3,26 @@
     Esta aplicação foi desenvolvida em PHP O.O (Object Oriented).
     Toda a aplicação foi desenvolvida voltada para a Rest api do Bitrix.
     
-    A fim de aumentar o padrão de seguraça do acesso a api, resolvi 
-    manter o uso do OAuth 2.0 ao invés do tradicional webhook, que
-    permite chamadas rest api de qualquer lugar a qualquer momento. Dessa
-    forma, se tornou necessária a instalação local do aplicativo, direto 
-    no portal do bitrix.
+    - A fim de aumentar o padrão de seguraça do acesso a api, resolvi 
+      manter o uso do OAuth 2.0 ao invés do tradicional webhook, que
+      permite chamadas rest api de qualquer lugar a qualquer momento. Dessa
+      forma, se tornou necessária a instalação local do aplicativo, direto 
+      no portal do bitrix.
     
     - Para o sistema de rotas, utilizei um pequeno framework chamado
-        [Slim Framework](https://github.com/slimphp/Slim). Através do
-        framework, todas as chamadas se tornam mais claras e
-        organizadas, tanto no código, quanto para as urls.
+      [Slim Framework](https://github.com/slimphp/Slim). Através do
+      framework, todas as chamadas se tornam mais claras e
+      organizadas, tanto no código, quanto para as urls.
         
     - Toda organização do código foi feita com base no padrão MVC, 
-    dessa maneira, mantendo, organizando, e padronizando o projeto
-    de forma mais eficiênte.
+      dessa maneira, mantendo, organizando, e padronizando o projeto
+      de forma mais eficiênte.
     
     - Como forma de hospedagem, utilizei a plataforma 
-    [Heroku](www.heroku.com), que, além de hospedar 
-    minha aplicação na nuvem, fornece certificado SSL. Isto
-    permitiu o desenvolvimento do projeto utilizando a Rest api
-    do portal Bitrix.
+      [Heroku](www.heroku.com), que, além de hospedar 
+      minha aplicação na nuvem, fornece certificado SSL. Isto
+      permitiu o desenvolvimento do projeto utilizando a Rest api
+      do portal Bitrix.
     
 - ### Instalação
     Para instalar o aplicativo em um novo portal, é necessário, primeiramente,
