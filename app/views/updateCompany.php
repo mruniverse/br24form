@@ -10,7 +10,7 @@
                         <form method="POST" class="row register-form" action="/update">
                             <div class="col-md-6">
                                 <div class="form-group">
-                                    <input type="text" name="company" class="form-control" placeholder="Company Name" value="<?= $company->getTitle() ?>" required/>
+                                    <input type="text" name="company" class="form-control" placeholder="Company Name" value="<?= $company->getCompany() ?>" required/>
                                 </div>
                                 <div class="form-group">
                                     <input type="text" name="cnpj" class="form-control" id="CNPJ" placeholder="CNPJ" value="<?= $company->getCnpj() ?>" required>

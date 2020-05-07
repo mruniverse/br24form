@@ -31,7 +31,7 @@ class Company{
 
     public function setCompanyByID($id){
         $result = \CRest::call('crm.company.get', [
-            $id => 'id'
+            'id' => $id
         ]);
 
         $this->setCompany($result['TITLE']);

@@ -16,7 +16,7 @@ class UpdateController{
 
         $contact->setContactByID($id);
 
-        View::make('update', [
+        View::make('updateContact', [
             'contact' => $contact
         ]);
     }
