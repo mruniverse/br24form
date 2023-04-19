@@ -16,7 +16,7 @@
         
     - Toda organização do código foi feita com base no padrão MVC, 
       dessa maneira, mantendo, organizando, e padronizando o projeto
-      de forma mais eficiênte.
+      de forma mais eficiente.
     
     - Como forma de hospedagem, utilizei a plataforma 
       [Heroku](www.heroku.com), que, além de hospedar 
